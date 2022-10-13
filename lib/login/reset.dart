@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_aadi/login/login_screen.dart';
 import 'package:login_aadi/utils/avatar.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
@@ -107,7 +108,10 @@ class _ResetState extends State<Reset> {
                       borderRadius: BorderRadius.circular(10)
                   ),
                   child: TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, PageRouteBuilder(
+                          pageBuilder: (_,__,___)=>LoginScreen()));
+                    },
                     child: Text('Reset',
                       style: TextStyle(
                           fontSize: 15,

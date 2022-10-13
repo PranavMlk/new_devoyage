@@ -41,7 +41,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       child: Text('Forgot',
                         style: TextStyle(
                             color: primaryColor,
-                            fontSize: 35,
+                            fontSize: 32,
                             fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -63,7 +63,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   child: Text('Password?',
                     style: TextStyle(
                         color: primaryColor,
-                        fontSize: 35,
+                        fontSize: 32,
                         fontWeight: FontWeight.bold
                     ),
                   ),

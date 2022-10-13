@@ -41,7 +41,7 @@ class _OtpState extends State<Otp> {
                         child: Text('Enter OTP',
                           style: TextStyle(
                               color: primaryColor,
-                              fontSize: 35,
+                              fontSize: 32,
                               fontWeight: FontWeight.bold
                           ),
                         ),
