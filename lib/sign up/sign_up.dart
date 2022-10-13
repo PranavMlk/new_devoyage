@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_aadi/login/login_screen.dart';
 import 'package:login_aadi/utils/avatar.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
+import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/mailIcon.dart';
 
 class SignUp extends StatefulWidget {
@@ -12,8 +13,10 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  Screen ? size;
   @override
   Widget build(BuildContext context) {
+    size = Screen(MediaQuery.of(context).size);
     return SafeArea(
       child: Scaffold(
         backgroundColor: thirdColor,
