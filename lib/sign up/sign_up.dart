@@ -32,10 +32,10 @@ class _SignUpState extends State<SignUp> {
                   children:[ Container(
                     margin: EdgeInsets.only(top: 7,left: 20),
                     alignment: Alignment.centerLeft,
-                    child: Text('Sign uuuup',
+                    child: Text('Sign up',
                       style: TextStyle(
                           color: primaryColor,
-                          fontSize: 35,
+                          fontSize: 32,
                           fontWeight: FontWeight.bold
                       ),
                     ),
