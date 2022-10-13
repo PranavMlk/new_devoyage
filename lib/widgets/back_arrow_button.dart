@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+import '../utils/colors/colors.dart';
+
+class BackArrow extends StatelessWidget {
+  const BackArrow({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(right: 370),
+      child: IconButton(
+        onPressed: (){
+          Navigator.pop(context);
+        },
+        icon: Icon(Icons.arrow_back_rounded,
+            size: 20,
+            color: primaryColor),
+      ),
+    );
+  }
+}
