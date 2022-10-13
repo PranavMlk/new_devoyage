@@ -47,9 +47,9 @@ class _ResetState extends State<Reset> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 41,left: 22),
+                      margin: EdgeInsets.only(top: 37,left: 22),
                       height:3.5,
-                      width: 40,
+                      width: 36,
                       decoration: BoxDecoration(
                           color: secondaryColor,
                           borderRadius: BorderRadius.circular(5)
@@ -82,7 +82,7 @@ class _ResetState extends State<Reset> {
                                 fontWeight: FontWeight.w400
                             ),
                           ),
-                          suffixIcon: VisibilityIcon(),
+                          suffixIcon: VisibilityOff(),
                         ),
                       ),
                       TextField(
@@ -102,7 +102,7 @@ class _ResetState extends State<Reset> {
                 Container(
                   width: 350,
                   height: 40,
-                  margin: EdgeInsets.only(top:30),
+                  margin: EdgeInsets.only(top:28),
                   decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10)

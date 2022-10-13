@@ -47,9 +47,9 @@ class _OtpState extends State<Otp> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 42,left: 22),
+                        margin: EdgeInsets.only(top: 38,left: 22),
                         height:3.5,
-                        width: 48,
+                        width: 45,
                         decoration: BoxDecoration(
                             color: secondaryColor,
                             borderRadius: BorderRadius.circular(5)

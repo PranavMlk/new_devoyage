@@ -47,9 +47,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 42,left: 22),
+                      margin: EdgeInsets.only(top: 38,left: 22),
                       height:3.5,
-                      width: 48,
+                      width: 44,
                       decoration: BoxDecoration(
                           color: secondaryColor,
                           borderRadius: BorderRadius.circular(5)
@@ -95,7 +95,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20,right: 30),
+                  margin: EdgeInsets.only(left: 20,right: 30,top: 3),
                   child: TextField(
                     decoration: InputDecoration(
                       icon:EmalIcons(),

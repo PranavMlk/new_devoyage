@@ -47,9 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                     Container(
-                      margin: EdgeInsets.only(top: 42,left: 22),
+                      margin: EdgeInsets.only(top: 38,left: 22),
                       height:3.5,
-                      width: 37,
+                      width: 32,
                       decoration: BoxDecoration(
                           color: secondaryColor,
                           borderRadius: BorderRadius.circular(5)
@@ -85,10 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontWeight: FontWeight.w400
                             ),
                           ),
-                          suffixIcon: IconButton(
-                            onPressed: (){},
-                            icon: VisibilityIcon(),
-                          ),
+                          suffixIcon: VisibilityOff()
                         ),
                       ),
                     ],

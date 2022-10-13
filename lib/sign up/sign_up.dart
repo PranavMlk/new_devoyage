@@ -44,9 +44,9 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                     Container(
-                      margin: EdgeInsets.only(top: 42,left: 22),
+                      margin: EdgeInsets.only(top: 38,left: 22),
                       height:3.5,
-                      width: 29,
+                      width: 27,
                       decoration: BoxDecoration(
                           color: secondaryColor,
                           borderRadius: BorderRadius.circular(5)
@@ -199,7 +199,7 @@ class _SignUpState extends State<SignUp> {
                 Container(
                   width: 350,
                   height: 40,
-                  margin: EdgeInsets.only(top:27),
+                  margin: EdgeInsets.only(top:29),
                   decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10)
@@ -216,7 +216,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 2.5),
+                  margin: EdgeInsets.only(top: 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
