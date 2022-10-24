@@ -7,6 +7,7 @@ class BackgroundColor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: double.infinity,
       color: primaryColor,
     );
   }

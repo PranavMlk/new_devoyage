@@ -44,7 +44,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                     Container(
-                      margin: EdgeInsets.only(top: 38,left: 22),
+                      margin: EdgeInsets.only(top: 39,left: 22),
                       height:3.5,
                       width: 27,
                       decoration: BoxDecoration(

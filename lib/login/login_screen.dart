@@ -21,18 +21,31 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
 
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: thirdColor,
-        body: SingleChildScrollView(
+    return Scaffold(
+      backgroundColor: thirdColor,
+      body: Center(
+        child: SingleChildScrollView(
           child: Container(
             color: thirdColor,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  margin: EdgeInsets.only(top: 10),
-                  child: Image.asset(login),
+                SizedBox(
+                  height: size?.hp(4),
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: size?.wp(6),
+                    ),
+                    Container(
+                      height:size?.hp(42),
+                      width: size?.wp(80),
+                      child: Image.asset(login),
+                    ),
+                    SizedBox(
+                      width: size?.wp(6),
+                    )
+                  ],
                 ),
                 Stack(
                   children:[ Container(
