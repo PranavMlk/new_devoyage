@@ -112,7 +112,7 @@ class _ScreenOneState extends State<ScreenOne> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Through our well-crafted teaching content',
-                              textScaleFactor: 0.7,
+                              textScaleFactor: 0.8,
                               style: TextStyle(
                                   color: grey3,
 
