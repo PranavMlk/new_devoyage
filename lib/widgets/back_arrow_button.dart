@@ -8,7 +8,6 @@ class BackArrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 370),
       child: IconButton(
         onPressed: (){
           Navigator.pop(context);

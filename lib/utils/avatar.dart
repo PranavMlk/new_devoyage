@@ -15,3 +15,4 @@ String overseas1 = "assets/overseas1.png";
 String oralCavity= "assets/oral_cavity.png";
 String background ="assets/background.png";
 String google = "assets/google.jpeg";
+String slotbooked = "assets/slotbooked.png";

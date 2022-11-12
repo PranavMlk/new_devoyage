@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:login_aadi/login/login_screen.dart';
 import 'package:login_aadi/onboarding/screen_1.dart';
+import 'package:login_aadi/onboarding/screen_2.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/utils/avatar.dart';
@@ -34,16 +35,15 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            SizedBox(height: size?.hp(45.5),),
             Container(
               height: size?.hp(7),
               width: size?.wp(86),
               child: Image.asset(companylogo),
             ),
-            SizedBox(
-              height: size?.hp(39),
-            ),
+            SizedBox(height: size?.hp(40),),
             Container(
               height: size?.hp(3),
               width: size?.wp(29),

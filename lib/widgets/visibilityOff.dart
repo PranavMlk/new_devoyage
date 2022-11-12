@@ -4,7 +4,7 @@ import '../utils/colors/colors.dart';
 
 class VisibilityOff extends StatelessWidget {
   const VisibilityOff({Key? key}) : super(key: key);
-
+final visibility=true;
   @override
   Widget build(BuildContext context) {
     return IconButton(

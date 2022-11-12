@@ -16,6 +16,7 @@ class _BackgroundImageState extends State<BackgroundImage> {
       child: Image.asset(background,
         fit:BoxFit.fitWidth,
         width: double.infinity,
+        height: double.infinity,
       ),
     );
   }

@@ -7,6 +7,8 @@ import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/backgroundImage.dart';
 import 'package:login_aadi/widgets/dots/grey_dot.dart';
 import 'package:login_aadi/widgets/dots/red_dot.dart';
+import 'package:login_aadi/widgets/onboarding_button.dart';
+import 'package:login_aadi/widgets/onboardingbold.dart';
 import '../widgets/skipButton.dart';
 
 
@@ -86,23 +88,8 @@ class _ScreenTwoState extends State<ScreenTwo> {
                           ],
                         ),
                       ),
-                      Column(
-                        children: [
-                          SizedBox(height: size?.hp(3),),
-                          Container(
-                            height: size?.hp(3),
-                            width: size?.wp(70),
-                            alignment: Alignment.center,
-                            child: Text("Study abroad, now easy!",
-                              style: TextStyle(
-                                  color: primaryColor,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 18.5
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      SizedBox(height: size?.hp(3),),
+                      BoldText(text: "Study abroad, now easy!"),
                       SizedBox(height: size?.hp(3),),
                       Container(
                         alignment: Alignment.center,
@@ -111,34 +98,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('Abroad medical admission might sound',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('hectic, but devoyage can help you shortlist',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('and guide you not only through the admission',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('but throughout the academic course.',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            )
+                            LateBold(text: 'Abroad medical admission might sound'),
+                            LateBold(text: 'hectic, but devoyage can help you shortlist'),
+                            LateBold(text: 'and guide you not only through the admission'),
+                            LateBold(text: 'but throughout the academic course.')
                           ],
                         ),
                       ),
@@ -148,29 +111,11 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                 SizedBox(width: size?.wp(4),),
                                 SkipButton(),
                                 SizedBox(width: size?.wp(57),),
-      Container(
-                                    width: 65,height: 65,
-                                    child: ElevatedButton(
-                                      style: ButtonStyle(
-                                        shape: MaterialStateProperty.all(CircleBorder()),
-                                        backgroundColor: MaterialStateProperty.all(secondaryColor),
-                                      ),
-                                      child: Container(
-                                        height: 33,
-                                        width: 33,
-                                        decoration: BoxDecoration(
-                                            color: thirdColor,
-                                            borderRadius: BorderRadius.circular(25)
-                                        ),
-                                        child: Icon(Icons.arrow_forward_ios_rounded,
-                                          color: primaryColor,),
-                                      ),
-                                      onPressed: (){
-                                        Navigator.push(
-                                            context, PageRouteBuilder(pageBuilder:(__,_,___)=>ScreenThree()));
-                                      },
-                                    ),
-                                  ),
+                                OnboardingButton(action: (){
+                                  Navigator.push(
+                                      context, PageRouteBuilder(
+                                      pageBuilder: (_,__,___)=>ScreenThree()));
+                                })
                               ],
                             ),
                     ],

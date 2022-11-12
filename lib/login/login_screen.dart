@@ -5,6 +5,7 @@ import 'package:login_aadi/utils/avatar.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/lockIcon.dart';
+import 'package:login_aadi/widgets/long_button.dart';
 import 'package:login_aadi/widgets/mailIcon.dart';
 import 'package:login_aadi/widgets/visibilityOff.dart';
 
@@ -17,20 +18,21 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   Screen ? size;
+  final visibility=true;
   @override
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
 
     return Scaffold(
       backgroundColor: thirdColor,
-      body: Center(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Center(
           child: Container(
             color: thirdColor,
             child: Column(
               children: [
                 SizedBox(
-                  height: size?.hp(4),
+                  height: size?.hp(2),
                 ),
                 Row(
                   children: [
@@ -47,102 +49,97 @@ class _LoginScreenState extends State<LoginScreen> {
                     )
                   ],
                 ),
-                Stack(
-                  children:[ Container(
-                    margin: EdgeInsets.only(top: 5,left: 20),
-                    alignment: Alignment.centerLeft,
-                    child: Text('Login',
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold
+                Row(
+                  children: [
+                    SizedBox(width:size?.wp(6),),
+                    Stack(
+                      children:[
+                        Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text('Login',
+                          textScaleFactor: 2.275,
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                    Container(
-                      margin: EdgeInsets.only(top: 38,left: 22),
-                      height:3.5,
-                      width: 32,
-                      decoration: BoxDecoration(
-                          color: secondaryColor,
-                          borderRadius: BorderRadius.circular(5)
-                      ),
+                        Column(
+                          children: [
+                            SizedBox(height: size?.hp(4.9),),
+                            Container(
+                              margin: EdgeInsets.only(left:2),
+                              height: size?.hp(.6),
+                              width: size?.wp(8),
+                              decoration: BoxDecoration(
+                                  color: secondaryColor,
+                                  borderRadius: BorderRadius.circular(5)
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),
+                SizedBox(height:size?.hp(1.5),),
                 Container(
-                  margin: EdgeInsets.only(top: 5,left: 25,right: 20),
+                  width: size?.wp(87),
                   child: Column(
                     children: [
                       TextField(
                         decoration: InputDecoration(
-                          icon: EmalIcons(),
-                          label: Text('Email ID',
-                            style: TextStyle(
-                                color: grey1,
-                                fontWeight: FontWeight.w400
-                            ),
-                          ),
+                          icon: EmailIcon(),
+                          hintText: 'Email ID'
                         ),
                       ),
                       SizedBox(
-                        height: 5,
+                        height:size?.hp(0.5),
                       ),
                       TextField(
                         obscureText: true,
                         decoration: InputDecoration(
                           icon:LockIcon(),
-                          label: Text('Password',
-                            style: TextStyle(
-                                color: grey1,
-                                fontWeight: FontWeight.w400
-                            ),
-                          ),
-                          suffixIcon: VisibilityOff()
+                          hintText: 'Password',
+                          suffixIcon: visibility?VisibilityOn():VisibilityOff(),
+
                         ),
                       ),
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(right: 12),
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.push(
-                          context, PageRouteBuilder(
-                          pageBuilder: (_,__,___)=>ForgotPassword()));
-                    },
-                    child: Text('Forgot Password?',
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold
+                SizedBox(height: size?.hp(2),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: (){
+                          Navigator.push(
+                              context, PageRouteBuilder(
+                              pageBuilder: (_,__,___)=>ForgotPassword()));
+                        },
+                        child: Text('Forgot Password?',
+                          textScaleFactor: .95,
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    SizedBox(width: size?.wp(5),),
+                  ],
                 ),
-                Container(
-                  width: 350,
-                  height: 40,
-                  margin: EdgeInsets.only(top:10),
-                  decoration: BoxDecoration(
-                      color: secondaryColor,
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: TextButton(
-                    onPressed: (){},
-                    child: Text('Login',
-                      style: TextStyle(
-                          fontSize: 15,
-                          color: thirdColor,
-                          fontWeight: FontWeight.w700
-                      ),
-                    ),
-                  ),
+                SizedBox(height: size?.hp(2),),
+                LongButton(
+                    action: (){},
+                    text: 'Login'
                 ),
+                SizedBox(height: size?.hp(1.5),),
                 Container(
-                  padding: EdgeInsets.only(top: 11),
+                  width: size?.wp(85),
                   alignment: Alignment.center,
                   child: Row(
                       children: <Widget>[
@@ -150,11 +147,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Divider(
                               color: grey1,
                               endIndent: 15,
-                              indent: 32,
+                              thickness: 1,
                             )
                         ),
 
                         Text("OR",
+                          textScaleFactor: 1,
                           style: TextStyle(
                               color: grey2,
                               fontWeight: FontWeight.w500
@@ -164,51 +162,50 @@ class _LoginScreenState extends State<LoginScreen> {
                         Expanded(
                           child: Divider(
                             color: grey1,
-                            endIndent: 32,
+                            thickness: 1,
                             indent: 15,
                           ),
                         ),
                       ]
                   ),
                 ),
+                SizedBox(height: size?.hp(1.5),),
                 Container(
-                  margin: EdgeInsets.only(top: 10),
-                  width: 350,
-                  height: 40,
+                  width: size?.wp(87),
+                  height: size?.hp(5),
                   decoration: BoxDecoration(
                       color: Colors.green.shade100,
                       borderRadius: BorderRadius.circular(10)
                   ),
-                  child: Container(
-                    child: TextButton(
-                        onPressed: (){},
-                        child: Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(left: 40),
-                              height: 20,
-                              width: 20,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle
-                              ),
-                              child: Image.asset(google),
+                  child: TextButton(
+                      onPressed: (){},
+                      child: Row(
+                        children: [
+                          SizedBox(width: size?.wp(10.5),),
+                          Container(
+                            height: size?.hp(2.575),
+                            width: size?.wp(5),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle
                             ),
-                            Container(
-                              margin: EdgeInsets.only(left: 55),
-                              child: Text('Login with google',
-                                style: TextStyle(
-                                    color: grey3,
-                                    fontSize: 15
-                                ),
+                            child: Image.asset(google),
+                          ),
+                          SizedBox(width: size?.wp(14),),
+                          Container(
+                            child: Text('Login with google',
+                              textScaleFactor: 1,
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                  color: grey3,
                               ),
                             ),
-                          ],
-                        )
-                    ),
+                          ),
+                        ],
+                      )
                   ),
                 ),
+                SizedBox(height: size?.hp(.150),),
                 Container(
-                  margin: EdgeInsets.only(top: 2.5),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -232,6 +229,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
+                SizedBox(height: size?.hp(0.5),),
               ],
             ),
           ),

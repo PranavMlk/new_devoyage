@@ -5,6 +5,7 @@ import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/back_arrow_button.dart';
 import 'package:login_aadi/widgets/lockIcon.dart';
+import 'package:login_aadi/widgets/long_button.dart';
 import 'package:login_aadi/widgets/visibilityOff.dart';
 
 class Reset extends StatefulWidget {
@@ -19,110 +20,130 @@ class _ResetState extends State<Reset> {
   @override
   Widget build(BuildContext context) {
     size =Screen(MediaQuery.of(context).size);
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: thirdColor,
-        body: SingleChildScrollView(
-          child: Container(
-            color: thirdColor,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                BackArrow(),
-                Container(
-                  height: 217,
-                  child: Image.asset(reset),
-                ),
-                Stack(
-                  children:[
-                    Container(
-                      margin: EdgeInsets.only(top: 5,left: 20),
-                      alignment: Alignment.centerLeft,
-                      child: Text('Reset',
-                        style: TextStyle(
-                            color: primaryColor,
-                            fontSize: 32,
-                            fontWeight: FontWeight.bold
+    return Scaffold(
+      backgroundColor: thirdColor,
+      body: SingleChildScrollView(
+        child: Container(
+          color: thirdColor,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: size?.hp(2.5),
+              ),
+              Row(
+                children: [
+                  BackArrow(),
+                ],
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: size?.wp(6),
+                  ),
+                  Container(
+                    height:size?.hp(35),
+                    width: size?.wp(80),
+                    child: Image.asset(reset),
+                  ),
+                  SizedBox(
+                    width: size?.wp(6),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: size?.hp(1),
+              ),
+              Row(
+                children: [
+                  SizedBox(width:size?.wp(6),),
+                  Stack(
+                    children:[
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text('Reset',
+                          textScaleFactor: 2.225,
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.bold
+                          ),
                         ),
                       ),
+                      Column(
+                        children: [
+                          SizedBox(height: size?.hp(4.5),),
+                          Container(
+                            margin: EdgeInsets.only(left: 1.5),
+                            height: size?.hp(.6),
+                            width: size?.wp(11),
+                            decoration: BoxDecoration(
+                                color: secondaryColor,
+                                borderRadius: BorderRadius.circular(5)
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  SizedBox(width:size?.wp(6),),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text('Password!',
+                      textScaleFactor: 2.225,
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontWeight: FontWeight.bold
+                      ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 37,left: 22),
-                      height:3.5,
-                      width: 36,
-                      decoration: BoxDecoration(
-                          color: secondaryColor,
-                          borderRadius: BorderRadius.circular(5)
+                  ),
+                ],
+              ),
+              Container(
+                width: size?.wp(87),
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        icon: LockIcon(),
+                        label: Text('New Password',
+                          textScaleFactor: .95,
+                          style: TextStyle(
+                              color: grey1,
+                              fontWeight: FontWeight.w400
+                          ),
+                        ),
+                        suffixIcon: VisibilityOff(),
+                      ),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        icon: LockIcon(),
+                        label: Text('Confirm New Password',
+                          textScaleFactor: .95,
+                          style: TextStyle(
+                              color: grey1,
+                              fontWeight: FontWeight.w400
+                          ),
+                        ),
                       ),
                     ),
                   ],
                 ),
-                Container(
-                  margin: EdgeInsets.only(left: 20),
-                  alignment: Alignment.centerLeft,
-                  child: Text('Password!',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20,right: 20,top: 1),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          icon: LockIcon(),
-                          label: Text('New Password',
-                            style: TextStyle(
-                                color: grey1,
-                                fontWeight: FontWeight.w400
-                            ),
-                          ),
-                          suffixIcon: VisibilityOff(),
-                        ),
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          icon: LockIcon(),
-                          label: Text('Confirm New Password',
-                            style: TextStyle(
-                                color: grey1,
-                                fontWeight: FontWeight.w400
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 350,
-                  height: 40,
-                  margin: EdgeInsets.only(top:28),
-                  decoration: BoxDecoration(
-                      color: secondaryColor,
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.push(context, PageRouteBuilder(
-                          pageBuilder: (_,__,___)=>LoginScreen()));
-                    },
-                    child: Text('Reset',
-                      style: TextStyle(
-                          fontSize: 15,
-                          color: thirdColor,
-                          fontWeight: FontWeight.w700
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+              SizedBox(height: size?.hp(3),),
+              LongButton(
+                  action: (){
+                    Navigator.push(
+                        context, PageRouteBuilder(
+                        pageBuilder: (_,__,___)=>LoginScreen()));
+                  },
+                  text: 'Reset'
+              ),
+            ],
           ),
         ),
       ),

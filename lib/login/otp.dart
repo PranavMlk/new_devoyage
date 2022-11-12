@@ -4,6 +4,7 @@ import 'package:login_aadi/utils/avatar.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/back_arrow_button.dart';
+import 'package:login_aadi/widgets/long_button.dart';
 import 'package:login_aadi/widgets/otpBox.dart';
 
 class Otp extends StatefulWidget {
@@ -18,98 +19,115 @@ class _OtpState extends State<Otp> {
   @override
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
-    return SafeArea(
-      child: SafeArea(
-        child: Scaffold(
-          backgroundColor: thirdColor,
-          body: SingleChildScrollView(
-            child: Container(
-              color: thirdColor,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+    return Scaffold(
+      backgroundColor: thirdColor,
+      body: SingleChildScrollView(
+        child: Container(
+          color: thirdColor,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: size?.hp(2.5),
+              ),
+              Row(
                 children: [
                   BackArrow(),
+                ],
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: size?.wp(6),
+                  ),
                   Container(
-                    height: 225,
+                    height:size?.hp(30),
+                    width: size?.wp(80),
                     child: Image.asset(otp),
+                  ),
+                  SizedBox(
+                    width: size?.wp(6),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: size?.hp(2),
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: size?.wp(6),
                   ),
                   Stack(
                     children:[
                       Container(
-                        margin: EdgeInsets.only(top: 5,left: 20),
                         alignment: Alignment.centerLeft,
                         child: Text('Enter OTP',
+                          textScaleFactor: 2.225,
                           style: TextStyle(
                               color: primaryColor,
-                              fontSize: 32,
                               fontWeight: FontWeight.bold
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 38,left: 22),
-                        height:3.5,
-                        width: 45,
-                        decoration: BoxDecoration(
-                            color: secondaryColor,
-                            borderRadius: BorderRadius.circular(5)
-                        ),
+                      Column(
+                        children: [
+                          SizedBox(height: size?.hp(4.5),),
+                          Container(
+                            margin: EdgeInsets.only(left: 2),
+                            height: size?.hp(.6),
+                            width: size?.wp(10.5),
+                            decoration: BoxDecoration(
+                                color: secondaryColor,
+                                borderRadius: BorderRadius.circular(5)
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                  Container(
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 20,top: 10),
-                          alignment: Alignment.centerLeft,
-                          child: Text("A 6 digit code has been sent to",
-                            style: TextStyle(
-                                color: grey2,
-                                fontWeight: FontWeight.w500
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(left: 20,top: 1),
-                          alignment: Alignment.centerLeft,
-                          child: Text("z********a@gmial.com",
-                            style: TextStyle(
-                              color: grey2,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        OtpBox(),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 350,
-                    height: 40,
-                    margin: EdgeInsets.only(top:55),
-                    decoration: BoxDecoration(
-                        color: secondaryColor,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: TextButton(
-                      onPressed: (){
-                        Navigator.push(
-                            context, PageRouteBuilder(
-                            pageBuilder: (_,__,___)=>Reset()));
-                      },
-                      child: Text('Verify',
+                ],
+              ),
+              SizedBox(height: size?.hp(3),),
+              Container(
+                width: size?.wp(87),
+                child: Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("A 6 digit code has been sent to",
+                        textScaleFactor: .95,
                         style: TextStyle(
-                            fontSize: 15,
-                            color: thirdColor,
-                            fontWeight: FontWeight.w700
+                            color: grey2,
+                            fontWeight: FontWeight.w500
                         ),
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("z********a@gmial.com",
+                        textScaleFactor: .95,
+                        style: TextStyle(
+                          color: grey2,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
+              SizedBox(height: size?.hp(9),),
+              OtpBox(),
+              SizedBox(height: size?.hp(8),),
+              LongButton(
+                  action: (){
+                    Navigator.push(
+                        context, PageRouteBuilder(
+                        pageBuilder: (_,__,___)=>Reset()));
+                  },
+                  text: 'Verify',
+              ),
+            ],
           ),
         ),
       ),

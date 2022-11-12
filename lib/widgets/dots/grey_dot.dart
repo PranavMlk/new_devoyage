@@ -20,7 +20,7 @@ class _GreyDotState extends State<GreyDot> {
       width: size?.wp(1.5),
       decoration: BoxDecoration(
           color: grey2,
-          borderRadius: BorderRadius.circular(10)
+        shape: BoxShape.circle
       ),
     );
   }

@@ -7,6 +7,8 @@ import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/backgroundImage.dart';
 import 'package:login_aadi/widgets/dots/grey_dot.dart';
 import 'package:login_aadi/widgets/dots/red_dot.dart';
+import 'package:login_aadi/widgets/onboarding_button.dart';
+import 'package:login_aadi/widgets/onboardingbold.dart';
 import '../widgets/skipButton.dart';
 
 class ScreenThree extends StatefulWidget {
@@ -85,23 +87,8 @@ class _ScreenThreeState extends State<ScreenThree> {
                           ],
                         ),
                       ),
-                      Column(
-                        children: [
-                          SizedBox(height: size?.hp(3),),
-                          Container(
-                            alignment: Alignment.center,
-                            height: size?.hp(3),
-                            width: size?.wp(70),
-                            child: Text("Medico's mutual friend",
-                              style: TextStyle(
-                                  color: primaryColor,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 18.5
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      SizedBox(height: size?.hp(3),),
+                      BoldText(text: "Medico's mutual friend"),
                       SizedBox(height: size?.hp(3),),
                       Container(
                         alignment: Alignment.center,
@@ -109,27 +96,9 @@ class _ScreenThreeState extends State<ScreenThree> {
                         width: size?.wp(87),
                         child: Column(
                           children: [
-                            Text('Keep all your medico friend and colleagues in',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('a single hub, connect with them in our in-app',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('messenger on the go.',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
+                            LateBold(text: 'Keep all your medico friend and colleagues in'),
+                            LateBold(text: 'a single hub, connect with them in our in-app'),
+                            LateBold(text: 'messenger on the go.')
                           ],
                         ),
                       ),
@@ -139,29 +108,11 @@ class _ScreenThreeState extends State<ScreenThree> {
                           SizedBox(width: size?.wp(4),),
                           SkipButton(),
                           SizedBox(width: size?.wp(57),),
-                             Container(
-                              width: 65,height: 65,
-                              child: ElevatedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStateProperty.all(CircleBorder()),
-                                  backgroundColor: MaterialStateProperty.all(secondaryColor),
-                                ),
-                                child: Container(
-                                  height: 33,
-                                  width: 33,
-                                  decoration: BoxDecoration(
-                                      color: thirdColor,
-                                      borderRadius: BorderRadius.circular(25)
-                                  ),
-                                  child: Icon(Icons.arrow_forward_ios_rounded,
-                                    color: primaryColor,),
-                                ),
-                                onPressed: (){
-                                  Navigator.push(
-                                      context, PageRouteBuilder(pageBuilder: (_,__,___)=>ScreenFour()));
-                                },
-                              ),
-                            ),
+                          OnboardingButton(action: (){
+                            Navigator.push(
+                                context, PageRouteBuilder(
+                                pageBuilder: (_,__,___)=>ScreenFour()));
+                          })
                         ],
                       ),
                     ],

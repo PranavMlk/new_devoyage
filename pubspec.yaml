@@ -79,6 +79,17 @@ flutter:
      - assets/booked.png
      - assets/overseas1.png
      - assets/oral_cavity.png
+     - assets/slotbooked.png
+     - assets/voyagegrey.png
+     - assets/ygrey.png
+     - assets/expanded.png
+     - assets/timer1.png
+     - assets/university1.png
+     - assets/university2.png
+     - assets/university3.png
+     - assets/university4.png
+     - assets/humananotamy.png
+     -
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

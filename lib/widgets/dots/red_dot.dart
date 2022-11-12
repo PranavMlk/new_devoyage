@@ -20,7 +20,7 @@ class _RedDotState extends State<RedDot> {
       width: size?.wp(13),
       decoration: BoxDecoration(
           color: secondaryColor,
-          borderRadius: BorderRadius.circular(12)
+          borderRadius: BorderRadius.circular(12),
       ),
     );
   }

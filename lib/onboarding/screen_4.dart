@@ -7,6 +7,8 @@ import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/backgroundImage.dart';
 import 'package:login_aadi/widgets/dots/grey_dot.dart';
 import 'package:login_aadi/widgets/dots/red_dot.dart';
+import 'package:login_aadi/widgets/long_button.dart';
+import 'package:login_aadi/widgets/onboardingbold.dart';
 
 class ScreenFour extends StatefulWidget {
   const ScreenFour({Key? key}) : super(key: key);
@@ -84,85 +86,29 @@ class _ScreenFourState extends State<ScreenFour> {
                           ],
                         ),
                       ),
-                      Column(
-                        children: [
-                          SizedBox(height: size?.hp(3),),
-                          Container(
-                            child: Text("Interact with professionals",
-                              style: TextStyle(
-                                  color: primaryColor,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 18.5
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      SizedBox(height: size?.hp(3),),
+                      BoldText(text: 'Interact with professionals'),
                       SizedBox(height: size?.hp(3),),
                       Container(
                         child: Column(
                           children: [
-                            Text('Get your questions answered by some of the ',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('best lectures or doctors around the globe',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('through the medico hub CAVITY.post your',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('questions or doubts and engage with ',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
-                            Text('professionals.',
-                              style: TextStyle(
-                                  color: grey3,
-                                  fontSize: 15.5,
-                                  fontWeight: FontWeight.w400
-                              ),
-                            ),
+                            LateBold(text: 'Get your questions answered by some of the'),
+                            LateBold(text: 'best lectures or doctors around the globe'),
+                            LateBold(text: 'through the medico hub CAVITY.post your'),
+                            LateBold(text: 'questions or doubts and engage with'),
+                            LateBold(text: 'professionals.')
                           ],
                         ),
                       ),
-                      SizedBox(height: size?.hp(7),),
-                      Container(
-                        width: size?.wp(87),
-                        height: size?.hp(5),
-                        decoration: BoxDecoration(
-                            color: secondaryColor,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        child: TextButton(
-                          onPressed: (){
+                      SizedBox(height: size?.hp(5),),
+                      LongButton(
+                        text: 'Get Started',
+                          action:(){
                             Navigator.push(
                                 context, PageRouteBuilder(
                                 pageBuilder: (_,__,___)=>LoginScreen()));
                           },
-                          child: Text('Get Started',
-                            style: TextStyle(
-                                fontSize: 14,
-                                color: thirdColor,
-                                fontWeight: FontWeight.w700
-                            ),
-                          ),
-                        ),
-                      )
+                      ),
                     ],
                   ),
                 ),
