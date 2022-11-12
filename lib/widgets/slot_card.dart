@@ -82,3 +82,58 @@ class SlotCard extends StatelessWidget {
   }
 }
 
+class DateButton extends StatelessWidget {
+  late String text1;
+  late String text2;
+  late Color buttonColor;
+  late Color textColor;
+  late Color borderColor;
+
+  DateButton({
+    required this.text1,
+    required this.text2,
+    required this.buttonColor,
+    required this.textColor,
+    required this.borderColor
+});
+
+  Screen ? size;
+  @override
+  Widget build(BuildContext context) {
+    size = Screen(MediaQuery.of(context).size);
+    return Container(
+      height: size?.hp(7.5),
+      width: size?.wp(12.5),
+      decoration: BoxDecoration(
+        border: Border.all(color: borderColor),
+        borderRadius: BorderRadius.circular(12.5),
+        color: buttonColor,
+      ),
+      child: TextButton(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(text1,
+              textScaleFactor: 1.3,
+              style: TextStyle(
+                color: textColor,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(text2,
+              textScaleFactor: .7,
+              style: TextStyle(
+                  color: textColor,
+                  fontWeight: FontWeight.w500
+              ),
+            ),
+          ],
+        ),
+        onPressed: (){
+        },
+      ),
+    );
+  }
+}
+

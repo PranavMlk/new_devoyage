@@ -11,42 +11,6 @@ class OverSeaseThree extends StatefulWidget {
   State<OverSeaseThree> createState() => _OverSeaseThreeState();
 }
 
-DateButton(String text1,String text2,Color borderColor,Color buttonColor,Color textColor){
-  Screen ? size;
-  return Container(
-    height: size?.hp(7.5),
-    width: size?.wp(12.5),
-    decoration: BoxDecoration(
-      border: Border.all(color: borderColor),
-      borderRadius: BorderRadius.circular(12.5),
-      color: buttonColor,
-    ),
-    child: TextButton(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(text1,
-            textScaleFactor: 1.6,
-            style: TextStyle(
-                color: textColor,
-                fontWeight: FontWeight.bold,
-            ),
-          ),
-          Text(text2,
-            textScaleFactor: .8,
-            style: TextStyle(
-                color: textColor,
-                fontWeight: FontWeight.w500
-            ),
-          ),
-        ],
-      ),
-      onPressed: (){
-      },
-    ),
-  );
-}
 
 class _OverSeaseThreeState extends State<OverSeaseThree> {
   Screen ? size;
@@ -98,9 +62,9 @@ class _OverSeaseThreeState extends State<OverSeaseThree> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  DateButton('15', 'Jul', primaryColor, thirdColor, primaryColor),
-                  DateButton('16', 'Jul', grey2, grey2, grey1),
-                  DateButton('17', 'Jul', grey2, grey2, grey1),
+                  DateButton(text1: '15', text2: 'Jul', buttonColor: thirdColor, textColor: primaryColor, borderColor: primaryColor),
+                  DateButton(text1: '16', text2: 'Jul', buttonColor: grey2, textColor: grey1, borderColor: grey2),
+                  DateButton(text1: '17', text2: 'Jul', buttonColor: grey2, textColor: grey1, borderColor: grey2),
                 ],
               ),
               SizedBox(height: size?.hp(2),),

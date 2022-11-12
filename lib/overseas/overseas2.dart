@@ -2,135 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:login_aadi/overseas/oversease3.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
+import 'package:login_aadi/widgets/universityCard.dart';
 
 class OverseasTwo extends StatefulWidget {
   const OverseasTwo({Key? key}) : super(key: key);
 
   @override
   State<OverseasTwo> createState() => _OverseasTwoState();
-}
-Widget listTile(String image,String title,String subTitle){
-  return ListTile(
-    leading: Image.asset(image),
-    title: Text(title,
-      textScaleFactor: 1,
-      style: TextStyle(
-          color: primaryColor,
-          fontWeight: FontWeight.bold
-      ),
-    ),
-    subtitle: Text(subTitle,
-      textScaleFactor: .8,
-      style: TextStyle(
-          color: grey2,
-          fontWeight: FontWeight.bold
-      ),
-    ),
-    trailing: Container(
-        margin: EdgeInsets.only(bottom:35),
-        child: Icon(Icons.open_in_browser,color: grey2,)),
-  );
-}
-
-details(
-    String text1,String text1_2,
-    String text2,String text2_2,
-    String text3, String text3_2,
-    String text4,String text4_2){
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      Column(
-        children: [
-          Text(text1,
-            textScaleFactor: .9,
-            style: TextStyle(
-                fontWeight: FontWeight.bold
-            ),
-          ),
-          Text(text1_2,
-            textScaleFactor: .6,
-            style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: grey2
-            ),
-          ),
-        ],
-      ),
-      Column(
-        children: [
-          Text(text2,
-            textScaleFactor: .9,
-            style: TextStyle(
-                fontWeight: FontWeight.bold
-            ),
-          ),
-          Text(text2_2,
-            textScaleFactor: .6,
-            style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: grey2
-            ),
-          ),
-        ],
-      ),
-      Column(
-        children: [
-          Text(text3,
-            textScaleFactor: .9,
-            style: TextStyle(
-                fontWeight: FontWeight.bold
-            ),
-          ),
-          Text(text3_2,
-            textScaleFactor: .6,
-            style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: grey2
-            ),
-          ),
-        ],
-      ),
-      Column(
-        children: [
-          Text(text4,
-            textScaleFactor: .9,
-            style: TextStyle(
-                fontWeight: FontWeight.bold
-            ),
-          ),
-          Text(text4_2,
-            textScaleFactor: .6,
-            style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: grey2
-            ),
-          ),
-        ],
-      ),
-    ],
-  );
-}
-
-countryButton(String text,){
-  return TextButton(
-    onPressed: (){},
-    child: Text(text,
-      textScaleFactor: .8,
-      style: TextStyle(
-          color: thirdColor
-      ),
-    ),
-  );
-}
-
-buttonText(){
-  return Text('Shortlist',
-    textScaleFactor: 1,
-    style: TextStyle(
-        color: grey2
-    ),
-  );
 }
 
 class _OverseasTwoState extends State<OverseasTwo> {
@@ -207,66 +85,12 @@ class _OverseasTwoState extends State<OverseasTwo> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            height: size?.hp(4.5),
-                            width: size?.wp(16),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(7.5),
-                              ),
-                              color: primaryColor
-                            ),
-                            child: countryButton('Russia')
-                          ),
-                          Container(
-                            height: size?.hp(4.5),
-                            width: size?.wp(16),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(7.5),
-                                ),
-                                color: grey2
-                            ),
-                            child: countryButton('Georgia')
-                          ),
-                          Container(
-                            height: size?.hp(4.5),
-                            width: size?.wp(16),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(7.5),
-                                ),
-                                color: grey2
-                            ),
-                            child: countryButton('Armenia')
-                          ),
-                          Container(
-                              height: size?.hp(4.5),
-                              width: size?.wp(16),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(Radius.circular(7.5),
-                                  ),
-                                  color: grey2
-                              ),
-                              child: countryButton('USA')
-                          ),
-                          Container(
-                              height: size?.hp(4.5),
-                              width: size?.wp(16),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(Radius.circular(7.5),
-                                  ),
-                                  color: grey2
-                              ),
-                              child: countryButton('Canada')
-                          ),
-                          Container(
-                              height: size?.hp(4.5),
-                              width: size?.wp(16),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(Radius.circular(7.5),
-                                  ),
-                                  color: grey2
-                              ),
-                              child: countryButton('UK')
-                          )
+                          CountryButton(text: 'Russia', buttonColor: primaryColor, textColor: thirdColor),
+                          CountryButton(text: 'Georgia', buttonColor: grey2, textColor: grey1),
+                          CountryButton(text: 'Armenia', buttonColor: grey2, textColor: grey1),
+                          CountryButton(text: 'USA', buttonColor: grey2, textColor: grey1),
+                          CountryButton(text: 'Canada', buttonColor: grey2, textColor: grey1),
+                          CountryButton(text: 'UK', buttonColor: grey2, textColor: grey1),
                         ],
                       )
                     ],
@@ -289,164 +113,56 @@ class _OverseasTwoState extends State<OverseasTwo> {
                       ],
                     ),
                     SizedBox(height: size?.hp(1),),
-                    Container(
-                      width: size?.wp(87),
-                      height: size?.hp(22.5),
-                      decoration: BoxDecoration(
-                        color: thirdColor,
-                        borderRadius: BorderRadius.circular(8)
-                      ),
-                      child: Column(
-                        children: [
-                          listTile(
-                              'assets/university1.png',
-                              'Tver State Medical University',
-                              'Tver,Russia'),
-                          details(
-                              '5178', 'World rank',
-                              'Private', 'University type',
-                              '6 Yrs', 'Course duration',
-                              '684000rs/yr', 'Course fee'),
-                          SizedBox(height: size?.hp(1.5),),
-                          Container(
-                            width: size?.wp(45),
-                            height: size?.hp(5),
-                            decoration: ShapeDecoration(
-                                shape: StadiumBorder(
-                                  side: BorderSide(color: grey2)
-                                )
-                            ),
-                            child: TextButton(
-                              onPressed: (){
-                                setState(() {
-                                  container_visibility=!container_visibility;
-                                });
-                              },
-                              child: buttonText()
-                            ),
-                          ),
-                        ],
-                      ),
+                    UniversityCard(
+                        image: 'assets/university1.png', title: 'Tver State Medical University', subTitle: 'Tver,Russia',
+                        text1: '5178', text1_2: 'World rank',
+                        text2: 'Private', text2_2: 'University type',
+                        text3: '6 Yrs', text3_2: 'Course duration',
+                        text4: '684000rs/yr', text4_2: 'Course fee',
+                        action: (){
+                          setState(() {
+                            container_visibility=!container_visibility;
+                          });
+                        }
                     ),
                     SizedBox(height: size?.hp(2),),
-                    Container(
-                      width: size?.wp(87),
-                      height: size?.hp(22.5),
-                      decoration: BoxDecoration(
-                          color: thirdColor,
-                          borderRadius: BorderRadius.circular(8)
-                      ),
-                      child: Column(
-                        children: [
-                          listTile(
-                              'assets/university2.png',
-                              'Far Eastern Federal University',
-                              'Tver,Russia'),
-                          details(
-                              '5178', 'World rank',
-                              'Private', 'University type',
-                              '6 Yrs', 'Course duration',
-                              '684000rs/yr', 'Course fee'),
-                          SizedBox(height: size?.hp(1.5),),
-                          Container(
-                            width: size?.wp(45),
-                            height: size?.hp(5),
-                            decoration: ShapeDecoration(
-                                shape: StadiumBorder(
-                                    side: BorderSide(color: grey2)
-                                )
-                            ),
-                            child: TextButton(
-                              onPressed: (){
-                                setState(() {
-                                  container_visibility=!container_visibility;
-                                });
-                              },
-                              child: buttonText()
-                            ),
-                          ),
-                        ],
-                      ),
+                    UniversityCard(
+                        image: 'assets/university2.png', title: 'Far Eastern Federal University', subTitle: 'Tver,Russia',
+                        text1: '5178', text1_2: 'World rank',
+                        text2: 'Private', text2_2: 'University type',
+                        text3: '6 Yrs', text3_2: 'Course duration',
+                        text4: '684000rs/yr', text4_2: 'Course fee',
+                      action: (){
+                          setState(() {
+                            container_visibility=!container_visibility;
+                          });
+                      }
                     ),
                     SizedBox(height: size?.hp(2),),
-                    Container(
-                      width: size?.wp(87),
-                      height: size?.hp(22.5),
-                      decoration: BoxDecoration(
-                          color: thirdColor,
-                          borderRadius: BorderRadius.circular(8)
-                      ),
-                      child: Column(
-                        children: [
-                          listTile(
-                          'assets/university3.png',
-                          'Rudan State Medical University',
-                          'Tver,Russia'),
-                          details(
-                              '5178', 'World rank',
-                              'Private', 'University type',
-                              '6 Yrs', 'Course duration',
-                              '684000rs/yr', 'Course fee'),
-                          SizedBox(height: size?.hp(1.5),),
-                          Container(
-                            width: size?.wp(45),
-                            height: size?.hp(5),
-                            decoration: ShapeDecoration(
-                                shape: StadiumBorder(
-                                    side: BorderSide(color: grey2)
-                                )
-                            ),
-                            child: TextButton(
-                              onPressed: (){
-                                setState(() {
-                                  container_visibility=!container_visibility;
-                                });
-                              },
-                              child: buttonText()
-                            ),
-                          ),
-                        ],
-                      ),
+                    UniversityCard(
+                        image: 'assets/university3.png', title: 'Rudan State Medical University', subTitle: 'Tver,Russia',
+                        text1: '5178', text1_2: 'World rank',
+                        text2: 'Private', text2_2: 'University type',
+                        text3: '6 Yrs', text3_2: 'Course duration',
+                        text4: '684000rs/yr', text4_2: 'Course fee',
+                        action: (){
+                          setState(() {
+                            container_visibility=!container_visibility;
+                          });
+                        }
                     ),
                     SizedBox(height: size?.hp(2),),
-                    Container(
-                      width: size?.wp(87),
-                      height: size?.hp(22.5),
-                      decoration: BoxDecoration(
-                          color: thirdColor,
-                          borderRadius: BorderRadius.circular(8)
-                      ),
-                      child: Column(
-                        children: [
-                          listTile(
-                          'assets/university4.png',
-                          'Tyumen State Medical University',
-                          'Tver,Russia'),
-                          details(
-                              '5178', 'World rank',
-                              'Private', 'University type',
-                              '6 Yrs', 'Course duration',
-                              '684000rs/yr', 'Course fee'),
-                          SizedBox(height: size?.hp(1.5),),
-                          Container(
-                            width: size?.wp(45),
-                            height: size?.hp(5),
-                            decoration: ShapeDecoration(
-                                shape: StadiumBorder(
-                                    side: BorderSide(color: grey2)
-                                )
-                            ),
-                            child: TextButton(
-                              onPressed: (){
-                                setState(() {
-                                  container_visibility=!container_visibility;
-                                });
-                              },
-                              child: buttonText()
-                            ),
-                          ),
-                        ],
-                      ),
+                    UniversityCard(
+                        image: 'assets/university4.png', title: 'Tyumen State Medical University', subTitle: 'Tver,Russia',
+                        text1: '5178', text1_2: 'World rank',
+                        text2: 'Private', text2_2: 'University type',
+                        text3: '6 Yrs', text3_2: 'Course duration',
+                        text4: '684000rs/yr', text4_2: 'Course fee',
+                        action: (){
+                          setState(() {
+                            container_visibility=!container_visibility;
+                          });
+                        }
                     ),
                     SizedBox(height: size?.hp(2),),
                   ],
