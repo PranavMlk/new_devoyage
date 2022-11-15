@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+import 'package:login_aadi/teach_screen/tech_home_screen.dart';
+import 'package:login_aadi/utils/colors/colors.dart';
+import 'package:login_aadi/utils/responsive.dart';
+
+import '../../utils/avatar.dart';
+import '../../widgets/subject_cards.dart';
+
+class VideoOne extends StatefulWidget {
+  const VideoOne({Key? key}) : super(key: key);
+
+  @override
+  State<VideoOne> createState() => _VideoOneState();
+}
+
+class _VideoOneState extends State<VideoOne> {
+  Screen ? size;
+  @override
+  Widget build(BuildContext context) {
+    size = Screen(MediaQuery.of(context).size);
+    return SafeArea(
+        child: Scaffold(
+          backgroundColor: grey1,
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            elevation: .3,
+            backgroundColor: thirdColor,
+            title: Container(
+              width: size?.wp(35),
+              child: Image.asset(companylogo),
+            ),
+          ),
+          body: SingleChildScrollView(
+            child: Column(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 7),
+                    height: size?.hp(5),
+                    width: double.infinity,
+                    color: thirdColor,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: size?.wp(9),
+                          child: TextButton(
+                              onPressed: (){
+                                Navigator.push(
+                                    context, PageRouteBuilder(
+                                    pageBuilder: (_,__,___)=>TeachHome()));
+                              },
+                              child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
+                        ),
+                        Text('/ ',
+                          textScaleFactor: 1,
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text('Video',
+                          textScaleFactor: 1,
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.w600,
+                              decoration: TextDecoration.underline
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: size?.hp(.5),),
+                  SubjectCard(text1: 'Human Anatomy', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Physiology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Biochemistry', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Pharmacology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Pathology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Microbiology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Forensic Medicine and tocxicology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Community Medicine', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'General Medicine', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Respiratory Medicine', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Pediatrics', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Psychiatry', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Dermatology,Venereology and Leprosy', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Physical Medicine and Rehabilitation', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'General surgery', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Ophthalmology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Otorhinolaryngology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Obstetrics and Gynaecology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Orthopedics', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Anesthesiology', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Radiodiagnosis', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Radiotherapy', text2: '10 Videos', action: (){}),
+                  SubjectCard(text1: 'Dentistry', text2: '10 Videos', action: (){}),
+                  SizedBox(height: size?.hp(1),)
+                ]
+            ),
+          ),
+        )
+    );
+  }
+}

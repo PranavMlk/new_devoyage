@@ -3,6 +3,9 @@ import 'package:login_aadi/utils/avatar.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
 
+import '../tech_home_screen.dart';
+import 'cs_1.dart';
+
 class CsTwo extends StatefulWidget {
   const CsTwo({Key? key}) : super(key: key);
 
@@ -19,6 +22,7 @@ class _CsTwoState extends State<CsTwo> {
       child: Scaffold(
         backgroundColor: Colors.grey.shade100,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           elevation: .3,
           title: Container(
             width: size?.wp(35),
@@ -31,29 +35,68 @@ class _CsTwoState extends State<CsTwo> {
             SizedBox(height: size?.hp(.1),),
             Container(
               color: thirdColor,
-              height: size?.hp(4),
+              padding: EdgeInsets.only(left: 7),
+              height: size?.hp(5),
               child: Row(
                 children: [
-                  SizedBox(width: size?.wp(3.5),),
-                  Icon(Icons.menu_book,color: primaryColor,),
-                  Text('  / Clinical Case',
-                    textScaleFactor: 1,
+              Container(
+                width: size?.wp(5),
+
+              child: TextButton(
+                  onPressed: (){
+                    Navigator.push(
+                        context, PageRouteBuilder(
+                        pageBuilder: (_,__,___)=>TeachHome()));
+                  },
+                  child: Icon(Icons.menu_book,color: primaryColor,size: 20,)
+              ),
+            ),
+      SizedBox(width: size?.wp(5),),
+
+      Container(
+        child: Row(
+          children: [
+            Text('/',
+              style: TextStyle(
+                color: primaryColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            TextButton(
+              onPressed: (){
+                Navigator.push(
+                    context, PageRouteBuilder(
+                    pageBuilder: (_,__,___)=>CsOne()));
+              },
+              child: Text('Clinical Case',
+                textScaleFactor: 1,
+                style: TextStyle(
+                    color: primaryColor,
+                    fontWeight: FontWeight.w600,
+                    decoration: TextDecoration.underline
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+                  Text('/ ',
                     style: TextStyle(
                       color: primaryColor,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Text('  / Oral Cavity Examination',
+                  Text('Oral Cavity Examination',
                     textScaleFactor: 1,
                     style: TextStyle(
                         color: primaryColor,
-                        fontWeight: FontWeight.w600
+                        fontWeight: FontWeight.w600,
+                        decoration: TextDecoration.underline
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: size?.hp(.5),),
             Stack(
                 children:[ Container(
                   height: size?.hp(29),
@@ -122,7 +165,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             Container(
               height: size?.hp(6),
               width: double.infinity,
@@ -146,7 +189,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             Container(
               height: size?.hp(6),
               width: double.infinity,
@@ -170,7 +213,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             Container(
               height: size?.hp(6),
               width: double.infinity,
@@ -194,7 +237,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             Container(
               height: size?.hp(6),
               width: double.infinity,
@@ -218,7 +261,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             Container(
               height: size?.hp(6),
               width: double.infinity,
@@ -242,7 +285,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             Container(
               height: size?.hp(6),
               width: double.infinity,
@@ -266,7 +309,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             Container(
               height: size?.hp(6),
               width: double.infinity,
@@ -291,7 +334,7 @@ class _CsTwoState extends State<CsTwo> {
                 onPressed: (){},
               ),
             ),
-            Divider(height: .2,color: grey1,),
+            Divider(height: .2,color: grey1,thickness: 1.5,),
             SizedBox(height: size?.hp(2),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

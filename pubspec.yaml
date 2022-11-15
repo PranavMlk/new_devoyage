@@ -89,7 +89,8 @@ flutter:
      - assets/university3.png
      - assets/university4.png
      - assets/humananotamy.png
-     -
+     - assets/profile.png
+     - assets/mcqcard.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

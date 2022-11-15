@@ -21,6 +21,7 @@ class _FcTwoState extends State<FcTwo> {
         child: Scaffold(
           backgroundColor: grey1,
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: thirdColor,
             toolbarHeight: 49.8,
             elevation: .3,
@@ -34,26 +35,42 @@ class _FcTwoState extends State<FcTwo> {
               Container(
                 height: size?.hp(5),
                 width: double.infinity,
+                padding: EdgeInsets.only(left: 7),
                 color: thirdColor,
                 child: Row(
                   children: [
-                    TextButton(
-                      onPressed: (){},
-                        child: Icon(Icons.menu_book,color: primaryColor,size: 20,),
+                    Container(
+                      width: size?.wp(5),
+                      child: TextButton(
+                        onPressed: (){},
+                          child: Icon(Icons.menu_book,color: primaryColor,size: 20,),
+                      ),
                     ),
+                    SizedBox(width: size?.wp(1),),
                     TextButton(
                       onPressed: (){
                         Navigator.push(
                             context, PageRouteBuilder(
                             pageBuilder: (_,__,___)=>FcOne()));
                       },
-                      child: Text('/ Flash Card',
-                        textScaleFactor: .9,
-                        style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600,
-                          decoration: TextDecoration.underline
-                        ),
+                      child: Row(
+                        children: [
+                          Text('/ ',
+                            textScaleFactor: .9,
+                            style: TextStyle(
+                                color: primaryColor,
+                                fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          Text('Flash Card',
+                            textScaleFactor: .9,
+                            style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.w600,
+                              decoration: TextDecoration.underline
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Text('/ Human Anatomy',
