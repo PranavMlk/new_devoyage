@@ -30,337 +30,280 @@ class _CsTwoState extends State<CsTwo> {
           ),
           backgroundColor: thirdColor,
         ),
-        body: Column(
-          children: [
-            SizedBox(height: size?.hp(.1),),
-            Container(
-              color: thirdColor,
-              padding: EdgeInsets.only(left: 7),
-              height: size?.hp(5),
-              child: Row(
-                children: [
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: size?.hp(.1),),
               Container(
-                width: size?.wp(5),
+                color: thirdColor,
+                padding: EdgeInsets.only(left: 7),
+                height: size?.hp(5),
+                child: Row(
+                  children: [
+                Container(
+                  width: size?.wp(5),
 
-              child: TextButton(
-                  onPressed: (){
-                    Navigator.push(
-                        context, PageRouteBuilder(
-                        pageBuilder: (_,__,___)=>TeachHome()));
-                  },
-                  child: Icon(Icons.menu_book,color: primaryColor,size: 20,)
+                child: TextButton(
+                    onPressed: (){
+                      Navigator.push(
+                          context, PageRouteBuilder(
+                          pageBuilder: (_,__,___)=>TeachHome()));
+                    },
+                    child: Icon(Icons.menu_book,color: primaryColor,size: 20,)
+                ),
               ),
-            ),
       SizedBox(width: size?.wp(5),),
 
       Container(
-        child: Row(
-          children: [
-            Text('/',
-              style: TextStyle(
-                color: primaryColor,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            TextButton(
-              onPressed: (){
-                Navigator.push(
-                    context, PageRouteBuilder(
-                    pageBuilder: (_,__,___)=>CsOne()));
-              },
-              child: Text('Clinical Case',
-                textScaleFactor: 1,
+          child: Row(
+            children: [
+              Text('/',
                 style: TextStyle(
-                    color: primaryColor,
-                    fontWeight: FontWeight.w600,
-                    decoration: TextDecoration.underline
+                  color: primaryColor,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-                  Text('/ ',
-                    style: TextStyle(
+              TextButton(
+                onPressed: (){
+                  Navigator.push(
+                      context, PageRouteBuilder(
+                      pageBuilder: (_,__,___)=>CsOne()));
+                },
+                child: Text('Clinical Case',
+                  textScaleFactor: 1,
+                  style: TextStyle(
                       color: primaryColor,
                       fontWeight: FontWeight.w600,
-                    ),
+                      decoration: TextDecoration.underline
                   ),
-                  Text('Oral Cavity Examination',
-                    textScaleFactor: 1,
-                    style: TextStyle(
+                ),
+              ),
+            ],
+          ),
+      ),
+                    Text('/ ',
+                      style: TextStyle(
                         color: primaryColor,
                         fontWeight: FontWeight.w600,
-                        decoration: TextDecoration.underline
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Stack(
-                children:[ Container(
-                  height: size?.hp(29),
-                  width: double.infinity,
-                  child: Image.asset(oralCavity,fit: BoxFit.fitWidth,),
+                    Text('Oral Cavity Examination',
+                      textScaleFactor: 1,
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontWeight: FontWeight.w600,
+                          decoration: TextDecoration.underline
+                      ),
+                    ),
+                  ],
                 ),
-                  Container(
-                    child: Column(
-                      children: [
-                        SizedBox(height: size?.hp(8),),
-                        Center(
-                          child: Container(
-                            child: Column(
-                              children: [
-                                Text('Oral Cavity',
-                                  textScaleFactor: 2,
-                                  style: TextStyle(
-                                      color: thirdColor,
-                                      fontWeight: FontWeight.w600
+              ),
+
+              Container(
+                height: size?.hp(83),
+                width: double.infinity,
+                child: ListView(
+                    children: [
+                      Stack(
+                          children:[ Container(
+                            height: size?.hp(29),
+                            width: double.infinity,
+                            child: Image.asset(oralCavity,fit: BoxFit.fitWidth,),
+                          ),
+                            Container(
+                              child: Column(
+                                children: [
+                                  SizedBox(height: size?.hp(8),),
+                                  Center(
+                                    child: Container(
+                                      child: Column(
+                                        children: [
+                                          Text('Oral Cavity',
+                                            textScaleFactor: 2,
+                                            style: TextStyle(
+                                                color: thirdColor,
+                                                fontWeight: FontWeight.w600
+                                            ),
+                                          ),
+                                          Text('Examination',
+                                            textScaleFactor: 2,
+                                            style: TextStyle(
+                                                color: thirdColor,
+                                                fontWeight: FontWeight.w600
+                                            ),
+                                          ),
+                                          SizedBox(height: size?.hp(5.5),),
+                                          Text('Dr. Ranchodas Chanchad',
+                                            textScaleFactor: 1,
+                                            style: TextStyle(
+                                                color: thirdColor,
+                                                fontWeight: FontWeight.w400
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                ),
-                                Text('Examination',
-                                  textScaleFactor: 2,
-                                  style: TextStyle(
-                                      color: thirdColor,
-                                      fontWeight: FontWeight.w600
-                                  ),
-                                ),
-                                SizedBox(height: size?.hp(5.5),),
-                                Text('Dr. Ranchodas Chanchad',
-                                  textScaleFactor: 1,
-                                  style: TextStyle(
-                                      color: thirdColor,
-                                      fontWeight: FontWeight.w400
-                                  ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
+                          ]
+                      ),
+                      ExpansionTile(
+                        title: Text(''),
+                        leading: Text('Table of Content',
+                          textScaleFactor: 1.5,
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.w600
                           ),
                         ),
+                        initiallyExpanded: false,
+                        collapsedIconColor: primaryColor,
+                        children: [
+                          Text('1. Gather Equipments'),
+                          Text('2. Introduction'),
+                          Text('3. General Inspection'),
+                          Text('4. Closer Inspection'),
+                          Text('5. Palpation'),
+                          Text('6. Final Examination'),
+                          Text('7. References')
+                        ],
+                      ),
+                      Divider(color: fourthColor,),
+           ExpansionTile(
+            title: Text(''),
+            leading: Text('Gather Equipments',
+              textScaleFactor: 1.5,
+              style: TextStyle(
+                  color: primaryColor,
+                  fontWeight: FontWeight.w600
+              ),
+            ),
+            initiallyExpanded: false,
+            children: [
+              Text('Headtorch or pen torch'),
+              Text('Tounge depressors(x2)'),
                       ],
-                    ),
                   ),
-                ]
-            ),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  children: [
-                    Text('Table of contents',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(43.5),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
+        Divider(color: fourthColor,),
+
+        ExpansionTile(
+              title: Text(''),
+              leading: Text('Introduction',
+                textScaleFactor: 1.5,
+                style: TextStyle(
+                    color: primaryColor,
+                    fontWeight: FontWeight.w600
                 ),
-                onPressed: (){},
               ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  children: [
-                    Text('Gather Equipments',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(39.5),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
-                ),
-                onPressed: (){},
-              ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  children: [
-                    Text('Introduction',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(55.5),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
-                ),
-                onPressed: (){},
-              ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  children: [
-                    Text('General Inspection',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(40.5),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
-                ),
-                onPressed: (){},
-              ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  children: [
-                    Text('Closer Inspection',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(43.5),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
-                ),
-                onPressed: (){},
-              ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  children: [
-                    Text('Palpation',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(62),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
-                ),
-                onPressed: (){},
-              ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  children: [
-                    Text('Final Examination',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(43),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
-                ),
-                onPressed: (){},
-              ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            Container(
-              height: size?.hp(6),
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(thirdColor),
-                    elevation: MaterialStateProperty.all(0)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text('References',
-                      textScaleFactor: 1.5,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
-                      ),
-                    ),
-                    SizedBox(width: size?.wp(57),),
-                    Icon(Icons.expand_more,color: primaryColor,),
-                    SizedBox(width: size?.wp(2),)
-                  ],
-                ),
-                onPressed: (){},
-              ),
-            ),
-            Divider(height: .2,color: grey1,thickness: 1.5,),
-            SizedBox(height: size?.hp(2),),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              initiallyExpanded: false,
               children: [
-                Image.asset('assets/expanded.png'),
-                SizedBox(width: size?.wp(4),),
-                Container(
-                  width: size?.wp(21),
-                  height: size?.hp(2),
-                  child: Stack(children: [Image.asset('assets/voyagegrey.png'),
-                    Row(
-                      children: [
-                        SizedBox(width: size?.wp(9.5),),
-                        Image.asset('assets/ygrey.png'),
-                      ],
-                    )
-                  ],
-                  ),
-                ),
-                SizedBox(width: size?.wp(1),),
-                Image.asset('assets/expanded.png')
               ],
-            )
+            ),
+                      Divider(color: fourthColor,),
+        ExpansionTile(
+          title: Text(''),
+          leading: Text('General Inspection',
+            textScaleFactor: 1.5,
+            style: TextStyle(
+                color: primaryColor,
+                fontWeight: FontWeight.w600
+            ),
+          ),
+          initiallyExpanded: false,
+          children: [
           ],
+        ),
+                      Divider(color: fourthColor,),
+        ExpansionTile(
+          title: Text(''),
+          leading: Text('Closer Inspection',
+            textScaleFactor: 1.5,
+            style: TextStyle(
+                color: primaryColor,
+                fontWeight: FontWeight.w600
+            ),
+          ),
+          initiallyExpanded: false,
+          children: [
+          ],
+        ),
+                      Divider(color: fourthColor,),
+        ExpansionTile(
+          title: Text(''),
+          leading: Text('Palpation',
+            textScaleFactor: 1.5,
+            style: TextStyle(
+                color: primaryColor,
+                fontWeight: FontWeight.w600
+            ),
+          ),
+          initiallyExpanded: false,
+          children: [
+          ],
+        ),
+                      Divider(color: fourthColor,),
+        ExpansionTile(
+          title: Text(''),
+          leading: Text('Final Examination',
+            textScaleFactor: 1.5,
+            style: TextStyle(
+                color: primaryColor,
+                fontWeight: FontWeight.w600
+            ),
+          ),
+          iconColor: primaryColor,
+          initiallyExpanded: false,
+          children: [
+          ],
+        ),
+                      Divider(color: fourthColor,),
+        ExpansionTile(
+          title: Text(''),
+          leading: Text('References',
+            textScaleFactor: 1.5,
+            style: TextStyle(
+                color: primaryColor,
+                fontWeight: FontWeight.w600
+            ),
+          ),
+          initiallyExpanded: false,
+          children: [
+          ],
+        ),
+                      Divider(color: fourthColor,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/expanded.png'),
+                          SizedBox(width: size?.wp(4),),
+                          Container(
+                            width: size?.wp(21),
+                            height: size?.hp(2),
+                            child: Stack(children: [Image.asset('assets/voyagegrey.png'),
+                              Row(
+                                children: [
+                                  SizedBox(width: size?.wp(9.5),),
+                                  Image.asset('assets/ygrey.png'),
+                                ],
+                              )
+                            ],
+                            ),
+                          ),
+                          SizedBox(width: size?.wp(1),),
+                          Image.asset('assets/expanded.png')
+                        ],
+                      )
+        ]
+              ),
+              ),
+
+  ]
+        ),
         ),
       ),
     );
+
   }
 }

@@ -14,6 +14,7 @@ class UniversityCard extends StatelessWidget {
    late String text4;
    late String text4_2;
    late Function() action;
+   var styling = new Map();
 
    UniversityCard({
      required this.image,
@@ -27,10 +28,12 @@ class UniversityCard extends StatelessWidget {
      required this.text3_2,
      required this.text4,
      required this.text4_2,
-     required this.action
+     required this.action,
+     required this.styling,
 });
 
   Screen ? size;
+
     @override
     Widget build(BuildContext context) {
       size = Screen(MediaQuery.of(context).size);
@@ -146,11 +149,12 @@ class UniversityCard extends StatelessWidget {
                   )
               ),
               child: TextButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(styling["backgroundcolor"]),shape: MaterialStateProperty.all(StadiumBorder())),
                 onPressed: action,
                 child: Text('Shortlist',
                   textScaleFactor: 1,
                   style: TextStyle(
-                      color: grey2
+                      color: styling["textcolor"]
                   ),
                 ),
               ),

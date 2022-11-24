@@ -13,7 +13,11 @@ class OverseasTwo extends StatefulWidget {
 
 class _OverseasTwoState extends State<OverseasTwo> {
   Screen ? size;
-  var container_visibility =false;
+  var changing1=false;
+  var changing2=false;
+  var changing3=false;
+  var changing4=false;
+  var container_visibility =true;
   @override
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
@@ -67,7 +71,7 @@ class _OverseasTwoState extends State<OverseasTwo> {
                               color: secondaryColor,
                             ),
                             child: Visibility(
-                              visible: container_visibility,
+                              visible: !container_visibility,
                               child: IconButton(
                                   onPressed: (){
                                     Navigator.push(context, PageRouteBuilder(
@@ -119,9 +123,11 @@ class _OverseasTwoState extends State<OverseasTwo> {
                         text2: 'Private', text2_2: 'University type',
                         text3: '6 Yrs', text3_2: 'Course duration',
                         text4: '684000rs/yr', text4_2: 'Course fee',
+                        styling:{"backgroundcolor":changing1?thirdColor:secondaryColor,"textcolor":changing1?grey2:thirdColor},
                         action: (){
                           setState(() {
                             container_visibility=!container_visibility;
+                            changing1=!changing1;
                           });
                         }
                     ),
@@ -132,9 +138,11 @@ class _OverseasTwoState extends State<OverseasTwo> {
                         text2: 'Private', text2_2: 'University type',
                         text3: '6 Yrs', text3_2: 'Course duration',
                         text4: '684000rs/yr', text4_2: 'Course fee',
+                        styling:{"backgroundcolor":changing2?thirdColor:secondaryColor,"textcolor":changing2?grey2:thirdColor},
                       action: (){
                           setState(() {
                             container_visibility=!container_visibility;
+                            changing2=!changing2;
                           });
                       }
                     ),
@@ -145,9 +153,11 @@ class _OverseasTwoState extends State<OverseasTwo> {
                         text2: 'Private', text2_2: 'University type',
                         text3: '6 Yrs', text3_2: 'Course duration',
                         text4: '684000rs/yr', text4_2: 'Course fee',
+                        styling:{"backgroundcolor":changing3?thirdColor:secondaryColor,"textcolor":changing3?grey2:thirdColor},
                         action: (){
                           setState(() {
                             container_visibility=!container_visibility;
+                            changing3=!changing3;
                           });
                         }
                     ),
@@ -158,9 +168,11 @@ class _OverseasTwoState extends State<OverseasTwo> {
                         text2: 'Private', text2_2: 'University type',
                         text3: '6 Yrs', text3_2: 'Course duration',
                         text4: '684000rs/yr', text4_2: 'Course fee',
+                        styling:{"backgroundcolor":changing4?thirdColor:secondaryColor,"textcolor":changing4?grey2:thirdColor},
                         action: (){
                           setState(() {
                             container_visibility=!container_visibility;
+                            changing4=!changing4;
                           });
                         }
                     ),
