@@ -30,6 +30,8 @@ class UniversityCard extends StatelessWidget {
      required this.text4_2,
      required this.action,
      required this.styling,
+
+
 });
 
   Screen ? size;
@@ -144,9 +146,7 @@ class UniversityCard extends StatelessWidget {
               width: size?.wp(45),
               height: size?.hp(5),
               decoration: ShapeDecoration(
-                  shape: StadiumBorder(
-                      side: BorderSide(color: grey2)
-                  )
+                  shape: StadiumBorder(side: BorderSide(color: styling["border"]))
               ),
               child: TextButton(
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(styling["backgroundcolor"]),shape: MaterialStateProperty.all(StadiumBorder())),
