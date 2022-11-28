@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_aadi/teach_screen/mcq/mcq2.dart';
 import 'package:login_aadi/utils/responsive.dart';
 import '../../utils/avatar.dart';
 import '../../utils/colors/colors.dart';
@@ -69,7 +70,10 @@ class _McqOneState extends State<McqOne> {
                     ),
                   ),
                   SizedBox(height: size?.hp(.5),),
-                  SubjectCard(text1: 'Human Anatomy', text2: '10 Modules', action: (){}),
+                  SubjectCard(text1: 'Human Anatomy', text2: '10 Modules', action: (){
+                    Navigator.push(context, PageRouteBuilder(
+                        pageBuilder: (_,__,___)=>McqTwo()));
+                  }),
                   SubjectCard(text1: 'Physiology', text2: '10 Modules', action: (){}),
                   SubjectCard(text1: 'Biochemistry', text2: '10 Modules', action: (){}),
                   SubjectCard(text1: 'Pharmacology', text2: '10 Modules', action: (){}),

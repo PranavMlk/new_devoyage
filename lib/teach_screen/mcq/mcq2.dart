@@ -18,49 +18,57 @@ class _McqTwoState extends State<McqTwo> {
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
     return SafeArea(
-        child: Scaffold(
-          backgroundColor: grey1,
-          appBar: AppBar(
-            toolbarHeight: 49.8,
-            elevation: .3,
-            backgroundColor: thirdColor,
-            title: Container(
-              width: size?.wp(35),
-              child: Image.asset(companylogo),
-            ),
+      child: Scaffold(
+        backgroundColor: Colors.grey.shade100,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          elevation: .3,
+          title: Container(
+            width: size?.wp(35),
+            child: Image.asset(companylogo),
           ),
-          body: SingleChildScrollView(
-            child: Column(
+          backgroundColor: thirdColor,
+        ),
+        body: SingleChildScrollView(
+          child: Column(
               children: [
+                SizedBox(height: size?.hp(.1),),
                 Container(
-                  height: size?.hp(5),
                   color: thirdColor,
+                  padding: EdgeInsets.only(left: 7),
+                  height: size?.hp(5),
                   child: Row(
                     children: [
                       Container(
-                        width: size?.wp(9),
-                        child: TextButton(
-                            onPressed: (){},
-                            child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
-                      ),
+                        width: size?.wp(5),
 
-                      TextButton(
-                        onPressed: (){
-                        },
+                        child: TextButton(
+                            onPressed: (){
+                            },
+                            child: Icon(Icons.menu_book,color: primaryColor,size: 20,)
+                        ),
+                      ),
+                      SizedBox(width: size?.wp(5),),
+
+                      Container(
                         child: Row(
                           children: [
-                            Text('/ ',
+                            Text('/',
                               style: TextStyle(
                                 color: primaryColor,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            Text('MCQ',
-                              textScaleFactor: 1,
-                              style: TextStyle(
-                                  color: primaryColor,
-                                  fontWeight: FontWeight.w600,
-                                  decoration: TextDecoration.underline
+                            TextButton(
+                              onPressed: (){
+                              },
+                              child: Text('MCQ',
+                                textScaleFactor: 1,
+                                style: TextStyle(
+                                    color: primaryColor,
+                                    fontWeight: FontWeight.w600,
+                                    decoration: TextDecoration.underline
+                                ),
                               ),
                             ),
                           ],
@@ -75,19 +83,32 @@ class _McqTwoState extends State<McqTwo> {
                       Text('Human Anatomy',
                         textScaleFactor: 1,
                         style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600,
-                          decoration: TextDecoration.underline,
+                            color: primaryColor,
+                            fontWeight: FontWeight.w600,
+                            decoration: TextDecoration.underline
                         ),
                       ),
                     ],
                   ),
                 ),
-                McqCard()
-              ],
-            ),
+
+                Container(
+                  height: size?.hp(83),
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(horizontal:10),
+                  child: ListView(
+                      children: [
+                        SizedBox(height: size?.hp(1),),
+                        McqCard(name: 'Gametogenesis', model: Icons.lock_open_outlined,color: primaryColor,text: 'FREE',),
+                      ]
+                  ),
+                ),
+
+              ]
           ),
         ),
+      ),
     );
+
   }
 }
