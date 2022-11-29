@@ -5,6 +5,8 @@ import 'package:login_aadi/utils/colors/colors.dart';
 import 'package:login_aadi/utils/responsive.dart';
 import 'package:login_aadi/widgets/dots/blackdot.dart';
 
+import '../tech_home_screen.dart';
+
 class FcTwo extends StatefulWidget {
   const FcTwo({Key? key}) : super(key: key);
 
@@ -33,54 +35,61 @@ class _FcTwoState extends State<FcTwo> {
           body: Column(
             children: [
               Container(
+                padding: EdgeInsets.only(left: 7),
                 height: size?.hp(5),
                 width: double.infinity,
-                padding: EdgeInsets.only(left: 7),
                 color: thirdColor,
                 child: Row(
                   children: [
                     Container(
-                      width: size?.wp(5),
+                      width: size?.wp(7),
                       child: TextButton(
-                        onPressed: (){},
-                          child: Icon(Icons.menu_book,color: primaryColor,size: 20,),
-                      ),
+                          onPressed: (){
+                            Navigator.push(
+                                context, PageRouteBuilder(
+                                pageBuilder: (_,__,___)=>TeachHome()));
+                          },
+                          child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
                     ),
-                    SizedBox(width: size?.wp(1),),
                     TextButton(
                       onPressed: (){
-                        Navigator.push(
-                            context, PageRouteBuilder(
-                            pageBuilder: (_,__,___)=>FcOne()));
+                        Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>FcOne()));
                       },
                       child: Row(
                         children: [
                           Text('/ ',
-                            textScaleFactor: .9,
-                            style: TextStyle(
-                                color: primaryColor,
-                                fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          Text('Flash Card',
-                            textScaleFactor: .9,
+                            textScaleFactor: 1,
                             style: TextStyle(
                               color: primaryColor,
                               fontWeight: FontWeight.w600,
-                              decoration: TextDecoration.underline
+                            ),
+                          ),
+                          Text('Flash Card',
+                            textScaleFactor: 1,
+                            style: TextStyle(
+                                color: primaryColor,
+                                fontWeight: FontWeight.w600,
+                                decoration: TextDecoration.underline
                             ),
                           ),
                         ],
                       ),
                     ),
-                    Text('/ Human Anatomy',
-                        textScaleFactor: .9,
-                        style: TextStyle(
-                            color: primaryColor,
-                            fontWeight: FontWeight.w600,
-                          decoration: TextDecoration.underline
-                        ),
+                    Text('/',
+                      textScaleFactor: 1,
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontWeight: FontWeight.w600,
                       ),
+                    ),
+                    Text(' Human Anatomy',
+                      textScaleFactor: 1,
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontWeight: FontWeight.w600,
+                          decoration: TextDecoration.underline
+                      ),
+                    ),
                   ],
                 ),
               ),

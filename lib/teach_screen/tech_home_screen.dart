@@ -27,7 +27,7 @@ class _TeachHomeState extends State<TeachHome> {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             backgroundColor: thirdColor,
-            elevation: .3,
+            elevation: .6,
             title: Container(
               width: size?.wp(35),
               child: Image.asset(companylogo),
@@ -37,7 +37,7 @@ class _TeachHomeState extends State<TeachHome> {
             child: Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: EdgeInsets.only(left: 15.5,top: 2.5),
                   width: double.infinity,
                   height: size?.hp(5),
                   color: thirdColor,
@@ -47,30 +47,40 @@ class _TeachHomeState extends State<TeachHome> {
                     ],
                   ),
                 ),
-                SizedBox(height: size?.wp(2),),
-                TeachCard(text1: 'Video', text2: '23 Topics', text3: '200 Vidoes',action: (){
-                  Navigator.push(
-                      context, PageRouteBuilder(
-                      pageBuilder: (_,__,___)=>VideoOne()));
-                },),
-                TeachCard(text1: 'MCQ', text2: '23 Topics', text3: '230 Vidoes',action: (){
-                  Navigator.push(
-                      context, PageRouteBuilder(
-                      pageBuilder: (_,__,___)=>McqOne()));
-                },),
-                TeachCard(text1: 'Clinical Case', text2: '23 Topics', text3: '230 Vidoes',action: (){
-                  Navigator.push(
-                      context, PageRouteBuilder(
-                      pageBuilder: (_,__,___)=>CsOne()));
-                },),
-                TeachCard(text1: 'Q-Bank', text2: '23 Topics', text3: '230 Vidoes',action: (){},),
-                TeachCard(text1: 'Flash Card', text2: '23 Topics', text3: '230 Vidoes',action: (){
-                  Navigator.push(
-                      context, PageRouteBuilder(
-                      pageBuilder: (_,__,___)=>FcOne()));
-                },),
-                TeachCard(text1: 'Prev Qn Paper', text2: '23 Topics', text3: '230 Vidoes',action: (){},),
-                SizedBox(height: size?.wp(2),),
+
+                Container(
+                    height: size?.hp(83),
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal:10),
+                    child: ListView(
+                      children: [
+                        SizedBox(height: size?.wp(1.5),),
+                        TeachCard(text1: 'Video', text2: '23 Topics', text3: '200 Vidoes',action: (){
+                          Navigator.push(
+                              context, PageRouteBuilder(
+                              pageBuilder: (_,__,___)=>VideoOne()));
+                        },),
+                        TeachCard(text1: 'MCQ', text2: '23 Topics', text3: '230 Vidoes',action: (){
+                          Navigator.push(
+                              context, PageRouteBuilder(
+                              pageBuilder: (_,__,___)=>McqOne()));
+                        },),
+                        TeachCard(text1: 'Clinical Case', text2: '23 Topics', text3: '230 Vidoes',action: (){
+                          Navigator.push(
+                              context, PageRouteBuilder(
+                              pageBuilder: (_,__,___)=>CsOne()));
+                        },),
+                        TeachCard(text1: 'Q-Bank', text2: '23 Topics', text3: '230 Vidoes',action: (){},),
+                        TeachCard(text1: 'Flash Card', text2: '23 Topics', text3: '230 Vidoes',action: (){
+                          Navigator.push(
+                              context, PageRouteBuilder(
+                              pageBuilder: (_,__,___)=>FcOne()));
+                        },),
+                        TeachCard(text1: 'Prev Qn Paper', text2: '23 Topics', text3: '230 Vidoes',action: (){},),
+                        SizedBox(height: size?.wp(2),),
+                      ],
+                    )
+                ),
               ],
             ),
           ),

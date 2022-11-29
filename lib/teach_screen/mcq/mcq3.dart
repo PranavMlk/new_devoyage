@@ -58,7 +58,9 @@ class _McqThreeState extends State<McqThree> {
                     backgroundColor: MaterialStateProperty.all(grey2),
                     shape: MaterialStateProperty.all(CircleBorder()),
                   ),
-                    onPressed: (){},
+                    onPressed: (){
+                    Navigator.pop(context);
+                    },
                     child: Icon(Icons.close,color: thirdColor,size: 20)
                   ),
       ]

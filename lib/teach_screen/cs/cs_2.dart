@@ -23,7 +23,7 @@ class _CsTwoState extends State<CsTwo> {
         backgroundColor: Colors.grey.shade100,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          elevation: .3,
+          elevation: .6,
           title: Container(
             width: size?.wp(35),
             child: Image.asset(companylogo),
@@ -33,55 +33,49 @@ class _CsTwoState extends State<CsTwo> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: size?.hp(.1),),
               Container(
-                color: thirdColor,
                 padding: EdgeInsets.only(left: 7),
                 height: size?.hp(5),
+                width: double.infinity,
+                color: thirdColor,
                 child: Row(
                   children: [
-                Container(
-                  width: size?.wp(5),
-
-                child: TextButton(
-                    onPressed: (){
-                      Navigator.push(
-                          context, PageRouteBuilder(
-                          pageBuilder: (_,__,___)=>TeachHome()));
-                    },
-                    child: Icon(Icons.menu_book,color: primaryColor,size: 20,)
-                ),
-              ),
-      SizedBox(width: size?.wp(5),),
-
-      Container(
-          child: Row(
-            children: [
-              Text('/',
-                style: TextStyle(
-                  color: primaryColor,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              TextButton(
-                onPressed: (){
-                  Navigator.push(
-                      context, PageRouteBuilder(
-                      pageBuilder: (_,__,___)=>CsOne()));
-                },
-                child: Text('Clinical Case',
-                  textScaleFactor: 1,
-                  style: TextStyle(
-                      color: primaryColor,
-                      fontWeight: FontWeight.w600,
-                      decoration: TextDecoration.underline
-                  ),
-                ),
-              ),
-            ],
-          ),
-      ),
-                    Text('/ ',
+                    Container(
+                      width: size?.wp(7),
+                      child: TextButton(
+                          onPressed: (){
+                            Navigator.push(
+                                context, PageRouteBuilder(
+                                pageBuilder: (_,__,___)=>TeachHome()));
+                          },
+                          child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
+                    ),
+                    TextButton(
+                      onPressed: (){
+                        Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>CsOne()));
+                      },
+                      child: Row(
+                        children: [
+                          Text('/ ',
+                            textScaleFactor: 1,
+                            style: TextStyle(
+                              color: primaryColor,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          Text('Clinical Case',
+                            textScaleFactor: 1,
+                            style: TextStyle(
+                                color: primaryColor,
+                                fontWeight: FontWeight.w600,
+                                decoration: TextDecoration.underline
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text('/',
+                      textScaleFactor: 1,
                       style: TextStyle(
                         color: primaryColor,
                         fontWeight: FontWeight.w600,
@@ -98,7 +92,6 @@ class _CsTwoState extends State<CsTwo> {
                   ],
                 ),
               ),
-
               Container(
                 height: size?.hp(83),
                 width: double.infinity,

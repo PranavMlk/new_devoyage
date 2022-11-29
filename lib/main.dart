@@ -15,13 +15,14 @@ import 'package:login_aadi/teach_screen/mcq/mcq2.dart';
 import 'package:login_aadi/teach_screen/mcq/mcq3.dart';
 import 'package:login_aadi/teach_screen/mcq/mcq_1.dart';
 import 'package:login_aadi/teach_screen/tech_home_screen.dart';
+import 'package:login_aadi/teach_screen/video/video_1.dart';
 import 'package:login_aadi/widgets/mcq_card.dart';
 import 'package:login_aadi/widgets/subject_cards.dart';
 
 void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: true,
-    home:McqOne(),
+    home:TeachHome(),
   ),
   );
 }

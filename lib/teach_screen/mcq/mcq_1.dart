@@ -23,7 +23,7 @@ class _McqOneState extends State<McqOne> {
           backgroundColor: grey1,
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            elevation: .3,
+            elevation: .6,
             backgroundColor: thirdColor,
             title: Container(
               width: size?.wp(35),
@@ -50,7 +50,7 @@ class _McqOneState extends State<McqOne> {
                               },
                               child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
                         ),
-                        SizedBox(width: size?.wp(1),),
+                        SizedBox(width: size?.wp(2.7),),
                         Text('/ ',
                           textScaleFactor: 1,
                           style: TextStyle(
@@ -69,34 +69,44 @@ class _McqOneState extends State<McqOne> {
                       ],
                     ),
                   ),
-                  SizedBox(height: size?.hp(.5),),
-                  SubjectCard(text1: 'Human Anatomy', text2: '10 Modules', action: (){
-                    Navigator.push(context, PageRouteBuilder(
-                        pageBuilder: (_,__,___)=>McqTwo()));
-                  }),
-                  SubjectCard(text1: 'Physiology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Biochemistry', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Pharmacology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Pathology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Microbiology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Forensic Medicine and tocxicology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Community Medicine', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'General Medicine', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Respiratory Medicine', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Pediatrics', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Psychiatry', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Dermatology,Venereology and Leprosy', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Physical Medicine and Rehabilitation', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'General surgery', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Ophthalmology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Otorhinolaryngology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Obstetrics and Gynaecology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Orthopedics', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Anesthesiology', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Radiodiagnosis', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Radiotherapy', text2: '10 Modules', action: (){}),
-                  SubjectCard(text1: 'Dentistry', text2: '10 Modules', action: (){}),
-                  SizedBox(height: size?.hp(1),)
+                  Container(
+                      height: size?.hp(83),
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(horizontal:10),
+                      child:ListView(
+                        children: [
+                          SizedBox(height: size?.hp(1),),
+                          SubjectCard(text1: 'Human Anatomy', text2: '10 Modules', action: (){
+                            Navigator.push(context, PageRouteBuilder(
+                                pageBuilder: (_,__,___)=>McqTwo()));
+                          }),
+                          SubjectCard(text1: 'Physiology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Biochemistry', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Pharmacology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Pathology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Microbiology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Forensic Medicine and tocxicology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Community Medicine', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'General Medicine', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Respiratory Medicine', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Pediatrics', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Psychiatry', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Dermatology,Venereology and Leprosy', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Physical Medicine and Rehabilitation', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'General surgery', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Ophthalmology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Otorhinolaryngology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Obstetrics and Gynaecology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Orthopedics', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Anesthesiology', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Radiodiagnosis', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Radiotherapy', text2: '10 Modules', action: (){}),
+                          SubjectCard(text1: 'Dentistry', text2: '10 Modules', action: (){}),
+                          SizedBox(height: size?.hp(1),)
+                        ],
+                      )
+                  ),
+
                 ]
             ),
           ),

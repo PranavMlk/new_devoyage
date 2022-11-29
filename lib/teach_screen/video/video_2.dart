@@ -1,37 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:login_aadi/teach_screen/mcq/mcq3.dart';
-import 'package:login_aadi/utils/colors/colors.dart';
+import 'package:login_aadi/teach_screen/video/video_1.dart';
 import 'package:login_aadi/utils/responsive.dart';
-import 'package:login_aadi/widgets/mcq_card.dart';
 
 import '../../utils/avatar.dart';
+import '../../utils/colors/colors.dart';
+import '../../widgets/mcq_card.dart';
 import '../tech_home_screen.dart';
-import 'mcq_1.dart';
 
-class McqTwo extends StatefulWidget {
-  const McqTwo({Key? key}) : super(key: key);
+class VideoTwo extends StatefulWidget {
+  const VideoTwo({Key? key}) : super(key: key);
 
   @override
-  State<McqTwo> createState() => _McqTwoState();
+  State<VideoTwo> createState() => _VideoTwoState();
 }
 
-class _McqTwoState extends State<McqTwo> {
+class _VideoTwoState extends State<VideoTwo> {
   Screen ? size;
   @override
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
-    return SafeArea(
+    return  SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey.shade100,
+        backgroundColor: grey1,
         appBar: AppBar(
-          automaticallyImplyLeading: false,
-          elevation: .6,
-          title: Container(
-            width: size?.wp(35),
-            child: Image.asset(companylogo),
-          ),
-          backgroundColor: thirdColor,
+        automaticallyImplyLeading: false,
+        elevation: .6,
+        backgroundColor: thirdColor,
+        title: Container(
+          width: size?.wp(35),
+          child: Image.asset(companylogo),
         ),
+      ),
         body: SingleChildScrollView(
           child: Column(
               children: [
@@ -54,7 +53,7 @@ class _McqTwoState extends State<McqTwo> {
                       ),
                       TextButton(
                         onPressed: (){
-                          Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>McqOne()));
+                          Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>VideoOne()));
                         },
                         child: Row(
                           children: [
@@ -65,7 +64,7 @@ class _McqTwoState extends State<McqTwo> {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            Text('MCQ',
+                            Text('Video',
                               textScaleFactor: 1,
                               style: TextStyle(
                                   color: primaryColor,
@@ -79,8 +78,8 @@ class _McqTwoState extends State<McqTwo> {
                       Text('/',
                         textScaleFactor: 1,
                         style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600,
+                            color: primaryColor,
+                            fontWeight: FontWeight.w600,
                         ),
                       ),
                       Text(' Human Anatomy',
@@ -102,9 +101,7 @@ class _McqTwoState extends State<McqTwo> {
                   child: ListView(
                       children: [
                         SizedBox(height: size?.hp(2),),
-                        McqCard(name: 'Gametogenesis', textColor: primaryColor,subColor: grey2, model: Icons.lock_open_outlined,color: primaryColor,text: 'FREE',action: (){
-                          Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>McqThree()));
-                        },),
+                        McqCard(name: 'Gametogenesis', textColor: primaryColor,subColor: grey2, model: Icons.lock_open_outlined,color: primaryColor,text: 'FREE', action: () {  },),
                         SizedBox(height: size?.hp(1),),
                         McqCard(name: 'Epithelium', textColor: grey1,subColor: grey1, model: Icons.headphones,color: Colors.yellowAccent.shade700,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
@@ -124,7 +121,7 @@ class _McqTwoState extends State<McqTwo> {
                         SizedBox(height: size?.hp(1),),
                         McqCard(name: 'Facial nerves', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(2),)
-                        
+
                       ]
                   ),
                 ),
@@ -134,6 +131,5 @@ class _McqTwoState extends State<McqTwo> {
         ),
       ),
     );
-
   }
 }

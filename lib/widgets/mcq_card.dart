@@ -5,15 +5,21 @@ import 'package:login_aadi/utils/responsive.dart';
 class McqCard extends StatelessWidget {
 
   late String name;
+  late Color textColor;
+  late Color subColor;
   late var model;
   late String? text;
   late Color? color;
+  late Function() action;
 
   McqCard({
     required this.name,
     required this.model,
     this.text,
-    this.color
+    this.color,
+    required this.textColor,
+    required this.subColor,
+    required this.action
 
 });
 
@@ -27,15 +33,16 @@ class McqCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: thirdColor,
         borderRadius: BorderRadius.all(Radius.circular(10)),
+        border: Border.all(color: grey2)
       ),
       child: TextButton(
-        onPressed: (){},
+        onPressed: action,
         child: ListTile(
           leading: Image.asset('assets/mcqcard.png'),
           title: Text(name,
             textScaleFactor: 1,
             style: TextStyle(
-              color: primaryColor,
+              color: textColor,
               fontWeight: FontWeight.bold
             ),
           ),
@@ -45,7 +52,7 @@ class McqCard extends StatelessWidget {
               Text('  20 MCQ\'s',
                 textScaleFactor: 1,
                 style: TextStyle(
-                  color: grey2,
+                  color: subColor,
                   fontWeight: FontWeight.w400
                 ),
               ),

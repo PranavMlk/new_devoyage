@@ -24,7 +24,7 @@ class _CsOneState extends State<CsOne> {
           backgroundColor: grey1,
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            elevation: .3,
+            elevation: .6,
             backgroundColor: thirdColor,
             title: Container(
               width: size?.wp(35),
@@ -41,21 +41,22 @@ class _CsOneState extends State<CsOne> {
                     color: thirdColor,
                     child: Row(
                       children: [
-                        Container(width: size?.wp(7),
+                        Container(
+                          width: size?.wp(7),
                           child: TextButton(
                               onPressed: (){
                                 Navigator.push(
                                     context, PageRouteBuilder(
                                     pageBuilder: (_,__,___)=>TeachHome()));
                               },
-                              child: Icon(Icons.menu_book,color: primaryColor,size: 20,)
-                          ),
+                              child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
                         ),
-                        SizedBox(width: size?.wp(1),),
+                        SizedBox(width: size?.wp(2),),
                         Text('/ ',
+                          textScaleFactor: 1,
                           style: TextStyle(
-                              color: primaryColor,
-                              fontWeight: FontWeight.w600,
+                            color: primaryColor,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                         Text('Clinical Case',
@@ -69,20 +70,30 @@ class _CsOneState extends State<CsOne> {
                       ],
                     ),
                   ),
-                  SizedBox(height: size?.hp(.5),),
-                  SubjectCard(text1: 'Oral Cavity Examination', text2: 'Dr.Ranchodas Chanchad', action: (){
-                    Navigator.push(
-                        context, PageRouteBuilder(
-                        pageBuilder: (_,__,___)=>CsTwo()));
-                  }),
-                  SubjectCard(text1: 'Auscultation Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
-                  SubjectCard(text1: 'Pneumonia Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
-                  SubjectCard(text1: 'Renel System Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
-                  SubjectCard(text1: 'Heart Functioning Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
-                  SubjectCard(text1: 'Retina Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
-                  SubjectCard(text1: 'Limb Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
-                  SubjectCard(text1: 'Nervous Sysytem Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
-                  SizedBox(height: size?.hp(1),)
+                  Container(
+                      height: size?.hp(83),
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(horizontal:10),
+                      child:ListView(
+                        children: [
+                          SizedBox(height: size?.hp(.5),),
+                          SubjectCard(text1: 'Oral Cavity Examination', text2: 'Dr.Ranchodas Chanchad', action: (){
+                            Navigator.push(
+                                context, PageRouteBuilder(
+                                pageBuilder: (_,__,___)=>CsTwo()));
+                          }),
+                          SubjectCard(text1: 'Auscultation Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
+                          SubjectCard(text1: 'Pneumonia Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
+                          SubjectCard(text1: 'Renel System Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
+                          SubjectCard(text1: 'Heart Functioning Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
+                          SubjectCard(text1: 'Retina Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
+                          SubjectCard(text1: 'Limb Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
+                          SubjectCard(text1: 'Nervous Sysytem Examination', text2: 'Dr.Ranchodas Chanchad', action: (){}),
+                          SizedBox(height: size?.hp(1),)
+                        ],
+                      )
+                  )
+
                 ]
             ),
           ),
