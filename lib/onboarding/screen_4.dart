@@ -34,20 +34,12 @@ class _ScreenFourState extends State<ScreenFour> {
                 SizedBox(
                   height: size?.hp(4),
                 ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: size?.wp(6),
-                    ),
-                    Container(
-                      height:size?.hp(42),
-                      width: size?.wp(80),
-                      child: Image.asset(onboarding4),
-                    ),
-                    SizedBox(
-                      width: size?.wp(6),
-                    )
-                  ],
+                Center(
+                  child: Container(
+                    height:size?.hp(42),
+                    width: size?.wp(80),
+                    child: Image.asset(onboarding4),
+                  ),
                 ),
                 SizedBox(
                   height: size?.hp(8),

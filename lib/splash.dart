@@ -34,30 +34,29 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(height: size?.hp(45.5),),
-            Container(
-              height: size?.hp(7),
-              width: size?.wp(86),
-              child: Image.asset(companylogo),
-            ),
-            SizedBox(height: size?.hp(40),),
-            Container(
-              height: size?.hp(3),
-              width: size?.wp(29),
-              child: Text('Devoyage Pvt Ltd',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  color: primaryColor
+        child: Padding(
+          padding: const EdgeInsets.all(5),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Spacer(),
+              Container(
+                height: size?.hp(7),
+                width: size?.wp(86),
+                child: Image.asset(companylogo),
+              ),
+              Spacer(),
+              Container(
+                height: size?.hp(3),
+                child: Text('Devoyage Pvt Ltd',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: primaryColor
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: size?.hp(4),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );

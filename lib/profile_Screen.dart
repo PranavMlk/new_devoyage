@@ -32,14 +32,49 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           body: Column(
+
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 10),
-                height: size?.hp(10),
-                width: size?.wp(20),
-                child: CircleAvatar(
-                  backgroundColor: primaryColor,
+                height: size?.hp(12.5),
+                child: Stack(
+                  children: [
+                    Center(
+                      child: Container(
+                      height: size?.hp(10),
+                      width: size?.wp(20),
+                      child: CircleAvatar(
+                        backgroundColor: primaryColor,
+                        child: Container(
+                          height: size?.hp(9.6),
+                            width: size?.wp(20),
+                            child: Image.asset('assets/profile.png')
+                        ),
+                      ),
+                  ),
+                    ),
+      Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Center(
+            child: Container(
+              alignment: Alignment.topLeft,
+              height: size?.hp(3.5),
+              width: size?.wp(9),
+              decoration: BoxDecoration(
+                color: primaryColor,
+                shape: BoxShape.circle,
+                border: Border.all(color: thirdColor)
+              ),
+              child: TextButton(
+                  onPressed: (){},
+                  child: Icon(Icons.edit,color: thirdColor,size: 12.5)
+              ),
+            ),
+          ),
+        ],
+      )
+      ]
                 ),
               ),
               Spacer(flex: 2,),

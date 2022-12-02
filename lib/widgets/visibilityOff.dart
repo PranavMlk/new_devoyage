@@ -13,7 +13,7 @@ final visibility=true;
       },
       icon: Icon(Icons.visibility_off_outlined,
       color: grey2,
-      size: 20,
+      size: 30,
       ),
     );
   }
@@ -30,7 +30,7 @@ class VisibilityOn extends StatelessWidget {
       },
       icon: Icon(Icons.visibility_outlined,
       color: grey2,
-      size: 20,
+      size: 30,
       ),
     );
   }

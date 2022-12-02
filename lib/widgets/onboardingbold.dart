@@ -19,7 +19,7 @@ class BoldText extends StatelessWidget {
       width: size?.wp(70),
       alignment: Alignment.center,
       child: Text(text,
-        textScaleFactor: 1.32,
+        textScaleFactor: 2,
         style: TextStyle(
           color: primaryColor,
           fontWeight: FontWeight.w700,
@@ -39,7 +39,7 @@ class LateBold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text,
-      textScaleFactor: 0.95,
+      textScaleFactor: 1.25,
       style: TextStyle(
           color: grey3,
 

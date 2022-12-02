@@ -41,10 +41,12 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     SizedBox(
                       width: size?.wp(6),
                     ),
-                    Container(
-                      height:size?.hp(42),
-                      width: size?.wp(80),
-                      child: Image.asset(onboarding2),
+                    Center(
+                      child: Container(
+                        height:size?.hp(42),
+                        width: size?.wp(80),
+                        child: Image.asset(onboarding2),
+                      ),
                     ),
                     SizedBox(
                       width: size?.wp(6),
@@ -106,18 +108,20 @@ class _ScreenTwoState extends State<ScreenTwo> {
                         ),
                       ),
                       SizedBox(height: size?.hp(4),),
-                      Row(
-                              children: [
-                                SizedBox(width: size?.wp(4),),
-                                SkipButton(),
-                                SizedBox(width: size?.wp(57),),
-                                OnboardingButton(action: (){
-                                  Navigator.push(
-                                      context, PageRouteBuilder(
-                                      pageBuilder: (_,__,___)=>ScreenThree()));
-                                })
-                              ],
-                            ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 25,right: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SkipButton(),
+                                  OnboardingButton(action: (){
+                                    Navigator.push(
+                                        context, PageRouteBuilder(
+                                        pageBuilder: (_,__,___)=>ScreenThree()));
+                                  })
+                                ],
+                              ),
+                      ),
                     ],
                   ),
                 ),

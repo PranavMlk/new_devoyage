@@ -34,20 +34,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: size?.hp(2),
                 ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: size?.wp(6),
-                    ),
-                    Container(
-                      height:size?.hp(42),
-                      width: size?.wp(80),
-                      child: Image.asset(login),
-                    ),
-                    SizedBox(
-                      width: size?.wp(6),
-                    )
-                  ],
+                SizedBox(
+                  width: size?.wp(6),
+                ),
+                Center(
+                  child: Container(
+                    height:size?.hp(42),
+                    width: size?.wp(80),
+                    child: Image.asset(login),
+                  ),
+                ),
+                SizedBox(
+                  width: size?.wp(6),
                 ),
                 Row(
                   children: [
@@ -66,11 +64,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                         Column(
                           children: [
-                            SizedBox(height: size?.hp(4.9),),
                             Container(
-                              margin: EdgeInsets.only(left:2),
-                              height: size?.hp(.6),
-                              width: size?.wp(8),
+                              margin: EdgeInsets.only(top: 32),
+                              height: size?.hp(.4),
+                              width: size?.wp(6.9),
                               decoration: BoxDecoration(
                                   color: secondaryColor,
                                   borderRadius: BorderRadius.circular(5)
@@ -94,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       SizedBox(
-                        height:size?.hp(0.5),
+                        height:size?.hp(2),
                       ),
                       TextField(
                         obscureText: true,
@@ -121,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               pageBuilder: (_,__,___)=>ForgotPassword()));
                         },
                         child: Text('Forgot Password?',
-                          textScaleFactor: .95,
+                          textScaleFactor: 1.25,
                           style: TextStyle(
                               color: primaryColor,
                               fontWeight: FontWeight.bold
@@ -193,7 +190,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           SizedBox(width: size?.wp(14),),
                           Container(
                             child: Text('Login with google',
-                              textScaleFactor: 1,
+                              textScaleFactor: 1.25,
                               style: TextStyle(
                                 fontFamily: 'Roboto',
                                   color: grey3,
@@ -210,6 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('New to DeVoyage?',
+                        textScaleFactor: 1.25,
                         style: TextStyle(
                             color: grey2
                         ),
@@ -221,6 +219,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               pageBuilder: (_,__,___)=>SignUp()));
                         },
                         child: Text('Register',
+                          textScaleFactor: 1.25,
                           style: TextStyle(
                               color: primaryColor
                           ),

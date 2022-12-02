@@ -13,7 +13,7 @@ class BackArrow extends StatelessWidget {
           Navigator.pop(context);
         },
         icon: Icon(Icons.arrow_back_rounded,
-            size: 20,
+            size: 30,
             color: primaryColor),
       ),
     );

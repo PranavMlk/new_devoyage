@@ -29,78 +29,63 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                height: size?.hp(2.5),
+                height: size?.hp(5),
               ),
               Row(
                 children: [
                   BackArrow(),
                 ],
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: size?.wp(6),
-                  ),
-                  Container(
-                    height:size?.hp(35),
-                    width: size?.wp(80),
-                    child:Image.asset(forgot),
-                  ),
-                  SizedBox(
-                    width: size?.wp(6),
-                  ),
-                ],
+              Container(
+                height:size?.hp(35),
+                width: size?.wp(80),
+                child:Image.asset(forgot),
               ),
               SizedBox(
                   height: size?.hp(1),
               ),
-              Row(
-                children: [
-                  SizedBox(width:size?.wp(6),),
-                  Stack(
-                    children:[
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        child: Text('Forgot',
-                          textScaleFactor: 2.225,
-                          style: TextStyle(
-                              color: primaryColor,
-                              fontWeight: FontWeight.bold,
-                          ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Stack(
+                  children:[
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text('Forgot',
+                        textScaleFactor: 2.225,
+                        style: TextStyle(
+                            color: primaryColor,
+                            fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Column(
-                        children: [
-                          SizedBox(height: size?.hp(4.7),),
-                          Container(
-                            margin: EdgeInsets.only(left: 2),
-                            height: size?.hp(.6),
-                            width: size?.wp(10.5),
-                            decoration: BoxDecoration(
-                                color: secondaryColor,
-                                borderRadius: BorderRadius.circular(5)
-                            ),
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 32),
+                          height: size?.hp(.4),
+                          width: size?.wp(8.9),
+                          decoration: BoxDecoration(
+                              color: secondaryColor,
+                              borderRadius: BorderRadius.circular(5)
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                children: [
-                  SizedBox(width:size?.wp(6),),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text('Password?',
-                      textScaleFactor: 2.225,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.bold
-                      ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30,top: 2),
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Password?',
+                    textScaleFactor: 2.225,
+                    style: TextStyle(
+                        color: primaryColor,
+                        fontWeight: FontWeight.bold
                     ),
                   ),
-                ],
+                ),
               ),
               SizedBox(height:size?.hp(2),),
               Container(
@@ -110,7 +95,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     Container(
                       alignment: Alignment.centerLeft,
                       child: Text("Don't worry it happense. Please enter the address",
-                        textScaleFactor: .95,
+                        textScaleFactor: 1.2,
                         style: TextStyle(
                           color: grey2,
                           fontWeight: FontWeight.w500,
@@ -120,7 +105,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     Container(
                       alignment: Alignment.centerLeft,
                       child: Text("associated with your account.",
-                        textScaleFactor: .95,
+                        textScaleFactor: 1.2,
                         style: TextStyle(
                           color: grey2,
                           fontWeight: FontWeight.w500,
@@ -146,7 +131,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
               ),
-              SizedBox(height: size?.hp(3.9),),
+              SizedBox(height: size?.hp(3.6),),
               LongButton(
                   action: (){
                     Navigator.push(

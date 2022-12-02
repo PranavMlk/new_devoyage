@@ -20,9 +20,9 @@ class _SkipButtonState extends State<SkipButton> {
               pageBuilder: (_,__,___)=>LoginScreen()));
         },
         child: Text('Skip',
+          textScaleFactor: 1.5,
           style: TextStyle(
               color: primaryColor,
-              fontSize: 15.5,
               fontWeight: FontWeight.w700
           ),
         ),

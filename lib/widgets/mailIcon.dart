@@ -19,6 +19,7 @@ class _EmailIconState extends State<EmailIcon> {
       width: size?.wp(5),
       height: size?.hp(2.5),
       child: Icon(Icons.alternate_email_sharp,
+        size: 30,
         color:primaryColor,
       ),
     );

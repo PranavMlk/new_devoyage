@@ -29,78 +29,64 @@ class _ResetState extends State<Reset> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                height: size?.hp(2.5),
+                height: size?.hp(5),
               ),
               Row(
                 children: [
                   BackArrow(),
                 ],
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: size?.wp(6),
-                  ),
-                  Container(
-                    height:size?.hp(35),
-                    width: size?.wp(80),
-                    child: Image.asset(reset),
-                  ),
-                  SizedBox(
-                    width: size?.wp(6),
-                  ),
-                ],
+
+              Container(
+                height:size?.hp(35),
+                width: size?.wp(80),
+                child: Image.asset(reset),
               ),
               SizedBox(
                 height: size?.hp(1),
               ),
-              Row(
-                children: [
-                  SizedBox(width:size?.wp(6),),
-                  Stack(
-                    children:[
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        child: Text('Reset',
-                          textScaleFactor: 2.225,
-                          style: TextStyle(
-                              color: primaryColor,
-                              fontWeight: FontWeight.bold
-                          ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Stack(
+                  children:[
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text('Reset',
+                        textScaleFactor: 2.225,
+                        style: TextStyle(
+                            color: primaryColor,
+                            fontWeight: FontWeight.bold
                         ),
                       ),
-                      Column(
-                        children: [
-                          SizedBox(height: size?.hp(4.5),),
-                          Container(
-                            margin: EdgeInsets.only(left: 1.5),
-                            height: size?.hp(.6),
-                            width: size?.wp(11),
-                            decoration: BoxDecoration(
-                                color: secondaryColor,
-                                borderRadius: BorderRadius.circular(5)
-                            ),
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 32),
+                          height: size?.hp(.4),
+                          width: size?.wp(9.5),
+                          decoration: BoxDecoration(
+                              color: secondaryColor,
+                              borderRadius: BorderRadius.circular(5)
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                children: [
-                  SizedBox(width:size?.wp(6),),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text('Password!',
-                      textScaleFactor: 2.225,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.bold
-                      ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30,top: 2),
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Password!',
+                    textScaleFactor: 2.225,
+                    style: TextStyle(
+                        color: primaryColor,
+                        fontWeight: FontWeight.bold
                     ),
                   ),
-                ],
+                ),
               ),
               Container(
                 width: size?.wp(87),
@@ -110,22 +96,23 @@ class _ResetState extends State<Reset> {
                       decoration: InputDecoration(
                         icon: LockIcon(),
                         label: Text('New Password',
-                          textScaleFactor: .95,
+                          textScaleFactor: 1,
                           style: TextStyle(
-                              color: grey1,
+                              color: grey2,
                               fontWeight: FontWeight.w400
                           ),
                         ),
                         suffixIcon: VisibilityOff(),
                       ),
                     ),
+                    SizedBox(height: size?.hp(1),),
                     TextField(
                       decoration: InputDecoration(
                         icon: LockIcon(),
                         label: Text('Confirm New Password',
-                          textScaleFactor: .95,
+                          textScaleFactor: 1,
                           style: TextStyle(
-                              color: grey1,
+                              color: grey2,
                               fontWeight: FontWeight.w400
                           ),
                         ),
@@ -134,7 +121,7 @@ class _ResetState extends State<Reset> {
                   ],
                 ),
               ),
-              SizedBox(height: size?.hp(3),),
+              SizedBox(height: size?.hp(4),),
               LongButton(
                   action: (){
                     Navigator.push(

@@ -27,7 +27,7 @@ Screen ? size;
       child: TextButton(
         onPressed: action,
         child: Text(text,
-          textScaleFactor: 1,
+          textScaleFactor: 1.25,
           style: TextStyle(
               color: thirdColor,
               fontWeight: FontWeight.w700,

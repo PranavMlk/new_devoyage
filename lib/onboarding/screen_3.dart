@@ -35,20 +35,12 @@ class _ScreenThreeState extends State<ScreenThree> {
                 SizedBox(
                   height: size?.hp(4),
                 ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: size?.wp(6),
-                    ),
-                    Container(
-                      height:size?.hp(42),
-                      width: size?.wp(80),
-                      child: Image.asset(onboarding3),
-                    ),
-                    SizedBox(
-                      width: size?.wp(6),
-                    ),
-                  ],
+                Center(
+                  child: Container(
+                    height:size?.hp(42),
+                    width: size?.wp(80),
+                    child: Image.asset(onboarding3),
+                  ),
                 ),
                 SizedBox(
                   height: size?.hp(8),
@@ -103,17 +95,19 @@ class _ScreenThreeState extends State<ScreenThree> {
                         ),
                       ),
                       SizedBox(height: size?.hp(4),),
-                      Row(
-                        children: [
-                          SizedBox(width: size?.wp(4),),
-                          SkipButton(),
-                          SizedBox(width: size?.wp(57),),
-                          OnboardingButton(action: (){
-                            Navigator.push(
-                                context, PageRouteBuilder(
-                                pageBuilder: (_,__,___)=>ScreenFour()));
-                          })
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 25,right: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SkipButton(),
+                            OnboardingButton(action: (){
+                              Navigator.push(
+                                  context, PageRouteBuilder(
+                                  pageBuilder: (_,__,___)=>ScreenFour()));
+                            })
+                          ],
+                        ),
                       ),
                     ],
                   ),
