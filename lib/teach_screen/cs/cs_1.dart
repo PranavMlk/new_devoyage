@@ -49,18 +49,18 @@ class _CsOneState extends State<CsOne> {
                                     context, PageRouteBuilder(
                                     pageBuilder: (_,__,___)=>TeachHome()));
                               },
-                              child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
+                              child: Icon(Icons.menu_book,color: primaryColor,size: 25,)),
                         ),
                         SizedBox(width: size?.wp(2),),
                         Text('/ ',
-                          textScaleFactor: 1,
+                          textScaleFactor: 1.3,
                           style: TextStyle(
                             color: primaryColor,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                         Text('Clinical Case',
-                          textScaleFactor: 1,
+                          textScaleFactor: 1.3,
                           style: TextStyle(
                               color: primaryColor,
                               fontWeight: FontWeight.w600,
@@ -71,7 +71,7 @@ class _CsOneState extends State<CsOne> {
                     ),
                   ),
                   Container(
-                      height: size?.hp(83),
+                      height: size?.hp(86),
                       width: double.infinity,
                       padding: EdgeInsets.symmetric(horizontal:10),
                       child:ListView(

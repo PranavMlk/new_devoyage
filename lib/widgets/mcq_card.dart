@@ -29,7 +29,7 @@ class McqCard extends StatelessWidget {
     size = Screen(MediaQuery.of(context).size);
     return Container(
       width: size?.wp(95),
-      height: size?.hp(13),
+      height: size?.hp(11),
       decoration: BoxDecoration(
         color: thirdColor,
         borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -40,7 +40,7 @@ class McqCard extends StatelessWidget {
         child: ListTile(
           leading: Image.asset('assets/mcqcard.png'),
           title: Text(name,
-            textScaleFactor: 1,
+            textScaleFactor: 1.3,
             style: TextStyle(
               color: textColor,
               fontWeight: FontWeight.bold
@@ -48,9 +48,9 @@ class McqCard extends StatelessWidget {
           ),
           subtitle: Row(
             children: [
-              Icon(Icons.access_time_rounded,size: 12.5,),
+              Icon(Icons.access_time_rounded,size: 17.5,),
               Text('  20 MCQ\'s',
-                textScaleFactor: 1,
+                textScaleFactor: 1.1,
                 style: TextStyle(
                   color: subColor,
                   fontWeight: FontWeight.w400
@@ -60,9 +60,9 @@ class McqCard extends StatelessWidget {
           ),
           trailing: Column(
             children: [
-              Icon(model,color: color,),
+              Icon(model,color: color,size: 25,),
               Text(text!,
-                textScaleFactor: .58,
+                textScaleFactor: 1,
                 style: TextStyle(
                   color: primaryColor,
                   fontWeight: FontWeight.w500

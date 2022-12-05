@@ -49,7 +49,7 @@ class _VideoTwoState extends State<VideoTwo> {
                                   context, PageRouteBuilder(
                                   pageBuilder: (_,__,___)=>TeachHome()));
                             },
-                            child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
+                            child: Icon(Icons.menu_book,color: primaryColor,size: 25,)),
                       ),
                       TextButton(
                         onPressed: (){
@@ -58,14 +58,14 @@ class _VideoTwoState extends State<VideoTwo> {
                         child: Row(
                           children: [
                             Text('/ ',
-                              textScaleFactor: 1,
+                              textScaleFactor: 1.3,
                               style: TextStyle(
                                 color: primaryColor,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                             Text('Video',
-                              textScaleFactor: 1,
+                              textScaleFactor: 1.3,
                               style: TextStyle(
                                   color: primaryColor,
                                   fontWeight: FontWeight.w600,
@@ -76,14 +76,14 @@ class _VideoTwoState extends State<VideoTwo> {
                         ),
                       ),
                       Text('/',
-                        textScaleFactor: 1,
+                        textScaleFactor: 1.3,
                         style: TextStyle(
                             color: primaryColor,
                             fontWeight: FontWeight.w600,
                         ),
                       ),
                       Text(' Human Anatomy',
-                        textScaleFactor: 1,
+                        textScaleFactor: 1.3,
                         style: TextStyle(
                             color: primaryColor,
                             fontWeight: FontWeight.w600,
@@ -95,7 +95,7 @@ class _VideoTwoState extends State<VideoTwo> {
                 ),
 
                 Container(
-                  height: size?.hp(83),
+                  height: size?.hp(86),
                   width: double.infinity,
                   padding: EdgeInsets.symmetric(horizontal:10),
                   child: ListView(

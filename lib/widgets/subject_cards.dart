@@ -19,7 +19,7 @@ Screen ? size;
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
     return Container(
-      height: size?.hp(12.4),
+      height: size?.hp(12),
       width: size?.wp(95),
       color: grey1,
       child: TextButton(
@@ -39,7 +39,7 @@ Screen ? size;
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
               Text(text1,
-              textScaleFactor: 1,
+              textScaleFactor: 1.3,
               style: TextStyle(
                   color: grey2,
                   fontWeight: FontWeight.w500
@@ -47,17 +47,20 @@ Screen ? size;
             ),
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(text2,
-              textScaleFactor: .8,
-              style: TextStyle(
-                  color: grey2,
-                  fontWeight: FontWeight.w500
-              ),
-            )
-          ],
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(text2,
+                textScaleFactor: 1.1,
+                style: TextStyle(
+                    color: grey2,
+                    fontWeight: FontWeight.w500
+                ),
+              )
+            ],
+          ),
         )
         ],
       ),

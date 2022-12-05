@@ -50,7 +50,7 @@ class _McqTwoState extends State<McqTwo> {
                                   context, PageRouteBuilder(
                                   pageBuilder: (_,__,___)=>TeachHome()));
                             },
-                            child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
+                            child: Icon(Icons.menu_book,color: primaryColor,size: 25,)),
                       ),
                       TextButton(
                         onPressed: (){
@@ -59,14 +59,14 @@ class _McqTwoState extends State<McqTwo> {
                         child: Row(
                           children: [
                             Text('/ ',
-                              textScaleFactor: 1,
+                              textScaleFactor: 1.3,
                               style: TextStyle(
                                 color: primaryColor,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                             Text('MCQ',
-                              textScaleFactor: 1,
+                              textScaleFactor: 1.3,
                               style: TextStyle(
                                   color: primaryColor,
                                   fontWeight: FontWeight.w600,
@@ -77,14 +77,14 @@ class _McqTwoState extends State<McqTwo> {
                         ),
                       ),
                       Text('/',
-                        textScaleFactor: 1,
+                        textScaleFactor: 1.3,
                         style: TextStyle(
                           color: primaryColor,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                       Text(' Human Anatomy',
-                        textScaleFactor: 1,
+                        textScaleFactor: 1.3,
                         style: TextStyle(
                             color: primaryColor,
                             fontWeight: FontWeight.w600,

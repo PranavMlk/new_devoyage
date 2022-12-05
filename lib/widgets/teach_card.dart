@@ -21,7 +21,7 @@ class TeachCard extends StatelessWidget {
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
     return Container(
-      height: size?.hp(17),
+      height: size?.hp(15),
       width: size?.wp(95),
       color: grey1,
       child: TextButton(
@@ -40,20 +40,20 @@ class TeachCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(text1,
-                        textScaleFactor: 1.2,
+                        textScaleFactor: 1.5,
                         style: TextStyle(
                           color: grey2,
                           fontWeight: FontWeight.bold
                         ),
                       ),
-                      Icon(Icons.more_vert_outlined,color: grey2,size: 18,)
+                      Icon(Icons.more_vert_outlined,color: grey2,size: 25,)
                     ],
                   ),
                   Spacer(),
                   Row(
                     children: [
                       Text(text2,
-                        textScaleFactor: .7,
+                        textScaleFactor: 1,
                         style: TextStyle(
                             color: grey2,
                             fontWeight: FontWeight.w500
@@ -62,18 +62,21 @@ class TeachCard extends StatelessWidget {
                     ],
                   ),
                   Spacer(flex: 7,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(text3,
-                        textScaleFactor: .8,
-                        style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(text3,
+                          textScaleFactor: 1,
+                          style: TextStyle(
+                            color: primaryColor,
+                            fontWeight: FontWeight.w600
+                          ),
                         ),
-                      ),
-                      SizedBox(width: size?.wp(1.5),)
-                    ],
+                        SizedBox(width: size?.wp(1.5),)
+                      ],
+                    ),
                   )
                 ],
               ),

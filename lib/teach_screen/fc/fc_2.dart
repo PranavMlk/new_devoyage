@@ -49,7 +49,7 @@ class _FcTwoState extends State<FcTwo> {
                                 context, PageRouteBuilder(
                                 pageBuilder: (_,__,___)=>TeachHome()));
                           },
-                          child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
+                          child: Icon(Icons.menu_book,color: primaryColor,size: 25,)),
                     ),
                     TextButton(
                       onPressed: (){
@@ -58,14 +58,14 @@ class _FcTwoState extends State<FcTwo> {
                       child: Row(
                         children: [
                           Text('/ ',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.3,
                             style: TextStyle(
                               color: primaryColor,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                           Text('Flash Card',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.3,
                             style: TextStyle(
                                 color: primaryColor,
                                 fontWeight: FontWeight.w600,
@@ -76,14 +76,14 @@ class _FcTwoState extends State<FcTwo> {
                       ),
                     ),
                     Text('/',
-                      textScaleFactor: 1,
+                      textScaleFactor: 1.3,
                       style: TextStyle(
                         color: primaryColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(' Human Anatomy',
-                      textScaleFactor: 1,
+                      textScaleFactor: 1.3,
                       style: TextStyle(
                           color: primaryColor,
                           fontWeight: FontWeight.w600,
@@ -102,8 +102,8 @@ class _FcTwoState extends State<FcTwo> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    Spacer(flex: 2,),
                     Container(
                       child: Column(
                         children: [
@@ -111,31 +111,31 @@ class _FcTwoState extends State<FcTwo> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text('What is the',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400
                                 ),
                               ),
                               Text(' origin',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold
                                 ),
                               ),
                               Text(' and',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400
                                 ),
                               ),
                               Text(' insertion',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold
                                 ),
                               ),
                               Text(' of the',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400
                                 ),
@@ -146,13 +146,13 @@ class _FcTwoState extends State<FcTwo> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text('lateral rectus',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
                               Text(' muscle?',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400
                                 ),
@@ -162,7 +162,9 @@ class _FcTwoState extends State<FcTwo> {
                         ],
                       ),
                     ),
+                    Spacer(),
                     Divider(indent: size?.wp(17),endIndent: size?.wp(17),color: grey2,),
+                    Spacer(flex: 2,),
                     Container(
                       child: Column(
                         children: [
@@ -170,13 +172,13 @@ class _FcTwoState extends State<FcTwo> {
                             children: [
                               SizedBox(width: size?.wp(16),),
                               Text('1. Origin :',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
                               Text(' common tendinous ring or the',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400
                                 ),
@@ -187,7 +189,7 @@ class _FcTwoState extends State<FcTwo> {
                             children: [
                               SizedBox(width: size?.wp(20),),
                               Text('annulus of zinn',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400
                                 ),
@@ -197,28 +199,31 @@ class _FcTwoState extends State<FcTwo> {
                         ],
                       ),
                     ),
+                    Spacer(flex: 2,),
                     Row(
                       children: [
                         SizedBox(width: size?.wp(16),),
                         Text('2. Insertin :',
-                          textScaleFactor: 1,
+                          textScaleFactor: 1.2,
                           style: TextStyle(
                               fontWeight: FontWeight.bold
                           ),
                         ),
                         Text(' lateral aspect of the sclera',
-                          textScaleFactor: 1,
+                          textScaleFactor: 1.2,
                           style: TextStyle(
                               fontWeight: FontWeight.w400
                           ),
                         ),
                       ],
                     ),
+                    Spacer(flex: 2,),
                     Container(
                       width: size?.wp(85),
                         height: size?.hp(17),
                         child: Image.asset('assets/humananotamy.png',),
                     ),
+                    Spacer(flex: 2,),
                     Row(
                       children: [
                         SizedBox(width: size?.wp(16),),
@@ -228,7 +233,7 @@ class _FcTwoState extends State<FcTwo> {
                               BlackDot(),
                               SizedBox(width: size?.wp(2),),
                               Text('NOTES :',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold
                                 ),
@@ -238,30 +243,31 @@ class _FcTwoState extends State<FcTwo> {
                         ),
                       ],
                     ),
+                    Spacer(),
                     Container(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('The lateral rectus is a flat-shapped muscle',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.2,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400
                             ),
                           ),
                           Text('and an abductor which moves the eye',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.2,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400
                             ),
                           ),
                           Text('laterally and side to side along with the',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.2,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400
                             ),
                           ),
                           Text('medical rectus.',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.2,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400
                             ),
@@ -269,6 +275,7 @@ class _FcTwoState extends State<FcTwo> {
                         ],
                       ),
                     ),
+                    Spacer(flex: 2,),
                     Row(
                       children: [
                         SizedBox(width: size?.wp(16),),
@@ -278,7 +285,7 @@ class _FcTwoState extends State<FcTwo> {
                               BlackDot(),
                               SizedBox(width: size?.wp(2),),
                               Text('REFERENCES :',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold
                                 ),
@@ -288,6 +295,7 @@ class _FcTwoState extends State<FcTwo> {
                         ),
                       ],
                     ),
+                    Spacer(),
                     Row(
                       children: [
                         SizedBox(width: size?.wp(16),),
@@ -297,13 +305,13 @@ class _FcTwoState extends State<FcTwo> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('www.patient.co.uk,Egton Medical',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400
                                 ),
                               ),
                               Text('Information System Limited.',
-                                textScaleFactor: 1,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400
                                 ),
@@ -313,6 +321,7 @@ class _FcTwoState extends State<FcTwo> {
                         ),
                       ],
                     ),
+                    Spacer(flex: 2,),
                   ],
                 ),
               ),
@@ -334,7 +343,7 @@ class _FcTwoState extends State<FcTwo> {
                         ),
                           onPressed: (){},
                           child: Text('PREV',
-                            textScaleFactor: .85,
+                            textScaleFactor: 1,
                             style: TextStyle(
                               color: thirdColor,
                               fontWeight: FontWeight.bold
@@ -343,7 +352,7 @@ class _FcTwoState extends State<FcTwo> {
                       ),
                     ),
                     Text('1 / 120',
-                      textScaleFactor: 1,
+                      textScaleFactor: 1.1,
                       style: TextStyle(
                         color: primaryColor,
                         fontWeight: FontWeight.bold
@@ -359,7 +368,7 @@ class _FcTwoState extends State<FcTwo> {
                         ),
                         onPressed: (){},
                         child: Text('NEXT',
-                          textScaleFactor: .85,
+                          textScaleFactor: 1,
                           style: TextStyle(
                               color: thirdColor,
                               fontWeight: FontWeight.bold

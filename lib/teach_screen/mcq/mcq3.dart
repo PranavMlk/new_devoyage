@@ -11,7 +11,7 @@ class McqThree extends StatefulWidget {
 
 Widget  McqText(String text){
   return Text(text,
-    textScaleFactor: 1,
+    textScaleFactor: 1.25,
     style: TextStyle(
         color: fourthColor,
         fontWeight: FontWeight.w400
@@ -21,7 +21,7 @@ Widget  McqText(String text){
 
 QText(String text){
  return Text(text,
-    textScaleFactor: 1.4,
+    textScaleFactor: 1.45,
     style: TextStyle(
         fontWeight: FontWeight.w500
     ),
@@ -41,30 +41,39 @@ class _McqThreeState extends State<McqThree> {
             children: [
               Divider(color: primaryColor,thickness: size?.hp(1),height: size?.hp(1),),
               SizedBox(height: size?.hp(1),),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              Stack(
                 children: [
-                  Text('Gametogensis',
-                    textScaleFactor: 1.2,
-                    style: TextStyle(
-                      color: primaryColor,
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline
+                  Container(
+                    padding: EdgeInsets.only(top: 10),
+                  child: Center(
+                    child: Text('Gametogensis',
+                      textScaleFactor: 1.5,
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline
+                      ),
                     ),
                   ),
-                  SizedBox(width: size?.wp(23),),
-                  TextButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(grey2),
-                    shape: MaterialStateProperty.all(CircleBorder()),
-                  ),
-                    onPressed: (){
-                    Navigator.pop(context);
-                    },
-                    child: Icon(Icons.close,color: thirdColor,size: 20)
-                  ),
-      ]
                 ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(grey2),
+                            shape: MaterialStateProperty.all(CircleBorder()),
+                          ),
+                          onPressed: (){
+                            Navigator.pop(context);
+                          },
+                          child: Icon(Icons.close,color: thirdColor,size: 20)
+                      ),
+                    ],
+                  )
+      ]
+              ),
+
               SizedBox(height: size?.hp(2),),
               Container(
                 width: double.infinity,
@@ -189,7 +198,7 @@ class _McqThreeState extends State<McqThree> {
                         ),
                         onPressed: (){},
                         child: Text('PREV',
-                          textScaleFactor: .85,
+                          textScaleFactor: 1,
                           style: TextStyle(
                               color: thirdColor,
                               fontWeight: FontWeight.bold
@@ -198,7 +207,7 @@ class _McqThreeState extends State<McqThree> {
                       ),
                     ),
                     Text('1 / 20',
-                      textScaleFactor: 1,
+                      textScaleFactor: 1.1,
                       style: TextStyle(
                           color: primaryColor,
                           fontWeight: FontWeight.bold
@@ -214,7 +223,7 @@ class _McqThreeState extends State<McqThree> {
                         ),
                         onPressed: (){},
                         child: Text('NEXT',
-                          textScaleFactor: .85,
+                          textScaleFactor: 1,
                           style: TextStyle(
                               color: thirdColor,
                               fontWeight: FontWeight.bold

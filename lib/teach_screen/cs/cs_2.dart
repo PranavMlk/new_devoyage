@@ -48,7 +48,7 @@ class _CsTwoState extends State<CsTwo> {
                                 context, PageRouteBuilder(
                                 pageBuilder: (_,__,___)=>TeachHome()));
                           },
-                          child: Icon(Icons.menu_book,color: primaryColor,size: 20,)),
+                          child: Icon(Icons.menu_book,color: primaryColor,size: 25,)),
                     ),
                     TextButton(
                       onPressed: (){
@@ -57,14 +57,14 @@ class _CsTwoState extends State<CsTwo> {
                       child: Row(
                         children: [
                           Text('/ ',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.3,
                             style: TextStyle(
                               color: primaryColor,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                           Text('Clinical Case',
-                            textScaleFactor: 1,
+                            textScaleFactor: 1.3,
                             style: TextStyle(
                                 color: primaryColor,
                                 fontWeight: FontWeight.w600,
@@ -75,14 +75,14 @@ class _CsTwoState extends State<CsTwo> {
                       ),
                     ),
                     Text('/',
-                      textScaleFactor: 1,
+                      textScaleFactor: 1.3,
                       style: TextStyle(
                         color: primaryColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text('Oral Cavity Examination',
-                      textScaleFactor: 1,
+                      textScaleFactor: 1.3,
                       style: TextStyle(
                           color: primaryColor,
                           fontWeight: FontWeight.w600,
@@ -93,13 +93,13 @@ class _CsTwoState extends State<CsTwo> {
                 ),
               ),
               Container(
-                height: size?.hp(83),
+                height: size?.hp(86),
                 width: double.infinity,
                 child: ListView(
                     children: [
                       Stack(
                           children:[ Container(
-                            height: size?.hp(29),
+                            height: size?.hp(26),
                             width: double.infinity,
                             child: Image.asset(oralCavity,fit: BoxFit.fitWidth,),
                           ),
@@ -127,7 +127,7 @@ class _CsTwoState extends State<CsTwo> {
                                           ),
                                           SizedBox(height: size?.hp(5.5),),
                                           Text('Dr. Ranchodas Chanchad',
-                                            textScaleFactor: 1,
+                                            textScaleFactor: 1.2,
                                             style: TextStyle(
                                                 color: thirdColor,
                                                 fontWeight: FontWeight.w400

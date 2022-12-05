@@ -43,13 +43,13 @@ class _TeachHomeState extends State<TeachHome> {
                   color: thirdColor,
                   child: Row(
                     children: [
-                      Icon(Icons.menu_book_outlined,color: primaryColor,size: 20,),
+                      Icon(Icons.menu_book_outlined,color: primaryColor,size: 25,),
                     ],
                   ),
                 ),
 
                 Container(
-                    height: size?.hp(83),
+                    height: size?.hp(86),
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(horizontal:10),
                     child: ListView(
