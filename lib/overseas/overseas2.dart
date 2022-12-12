@@ -146,185 +146,187 @@ class _OverseasTwoState extends State<OverseasTwo> {
                   ],
                 ),
               ),
-              Column(
-                children: [
-                  SizedBox(
-                    height: size?.hp(1),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        '9 results',
-                        textScaleFactor: .9,
-                        style: TextStyle(
-                            color: grey2, fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        width: size?.wp(7),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: size?.hp(1),
-                  ),
-                  UniversityCard(
-                      image: 'assets/university1.png',
-                      title: 'Tver State Medical University',
-                      subTitle: 'Tver,Russia',
-                      text1: '5178',
-                      text1_2: 'World rank',
-                      text2: 'Private',
-                      text2_2: 'University type',
-                      text3: '6 Yrs',
-                      text3_2: 'Course duration',
-                      text4: '684000rs/yr',
-                      text4_2: 'Course fee',
+                  Container(
+                    height: size?.hp(77),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    width: double.infinity,
+                    child: ListView(
+                      children: [
+                        SizedBox(height: size?.hp(1),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              '9 results',
+                              textScaleFactor: .9,
+                              style: TextStyle(
+                                  color: grey2, fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
+                              width: size?.wp(7),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: size?.hp(1),
+                        ),
+                        UniversityCard(
+                            image: 'assets/university1.png',
+                            title: 'Tver State Medical University',
+                            subTitle: 'Tver,Russia',
+                            text1: '5178',
+                            text1_2: 'World rank',
+                            text2: 'Private',
+                            text2_2: 'University type',
+                            text3: '6 Yrs',
+                            text3_2: 'Course duration',
+                            text4: '684000rs/yr',
+                            text4_2: 'Course fee',
 
-                      styling: {
-                        "backgroundcolor":
-                        changing1 ? secondaryColor : thirdColor,
-                        "textcolor": changing1 ? thirdColor : grey2,
-                        "border":borderbool1?grey2:thirdColor
-                      },
-                      action: () {
-                        setState(() {
-                          borderbool1=!borderbool1;
-                          changing1 = !changing1;
-                          changing2 = false;
-                          changing3 = false;
-                          changing4 = false;
-                          if (changing1 == false &&
-                              changing2 == false &&
-                              changing3 == false &&
-                              changing4 == false) {
-                            container_visibility = false;
-                          } else {
-                            container_visibility = true;
-                          }
-                        });
-                      }),
-                  SizedBox(
-                    height: size?.hp(2),
-                  ),
-                  UniversityCard(
-                      image: 'assets/university2.png',
-                      title: 'Far Eastern Federal University',
-                      subTitle: 'Tver,Russia',
-                      text1: '5178',
-                      text1_2: 'World rank',
-                      text2: 'Private',
-                      text2_2: 'University type',
-                      text3: '6 Yrs',
-                      text3_2: 'Course duration',
-                      text4: '684000rs/yr',
-                      text4_2: 'Course fee',
-                      styling: {
-                        "backgroundcolor":
-                        changing2 ? secondaryColor : thirdColor,
-                        "textcolor": changing2 ? thirdColor : grey2,
-                        "border":borderbool2?grey2:thirdColor
-                      },
-                      action: () {
-                        setState(() {
-                          borderbool2=!borderbool2;
-                          changing2 = !changing2;
-                          changing1 = false;
-                          changing3 = false;
-                          changing4 = false;
-                          if (changing1 == false &&
-                              changing2 == false &&
-                              changing3 == false &&
-                              changing4 == false) {
-                            container_visibility = false;
-                          } else {
-                            container_visibility = true;
-                          }
-                        });
-                      }),
-                  SizedBox(
-                    height: size?.hp(2),
-                  ),
-                  UniversityCard(
-                      image: 'assets/university3.png',
-                      title: 'Rudan State Medical University',
-                      subTitle: 'Tver,Russia',
-                      text1: '5178',
-                      text1_2: 'World rank',
-                      text2: 'Private',
-                      text2_2: 'University type',
-                      text3: '6 Yrs',
-                      text3_2: 'Course duration',
-                      text4: '684000rs/yr',
-                      text4_2: 'Course fee',
-                      styling: {
-                        "backgroundcolor":
-                        changing3 ? secondaryColor : thirdColor,
-                        "textcolor": changing3 ? thirdColor : grey2,
-                        "border":borderbool3?grey2:thirdColor
-                      },
-                      action: () {
-                        setState(() {
-                          borderbool3=!borderbool3;
-                          changing3 = !changing3;
-                          changing2 = false;
-                          changing1 = false;
-                          changing4 = false;
-                          if (changing1 == false &&
-                              changing2 == false &&
-                              changing3 == false &&
-                              changing4 == false) {
-                            container_visibility = false;
-                          } else {
-                            container_visibility = true;
-                          }
-                        });
-                      }),
-                  SizedBox(
-                    height: size?.hp(2),
-                  ),
-                  UniversityCard(
-                      image: 'assets/university4.png',
-                      title: 'Tyumen State Medical University',
-                      subTitle: 'Tver,Russia',
-                      text1: '5178',
-                      text1_2: 'World rank',
-                      text2: 'Private',
-                      text2_2: 'University type',
-                      text3: '6 Yrs',
-                      text3_2: 'Course duration',
-                      text4: '684000rs/yr',
-                      text4_2: 'Course fee',
-                      styling: {
-                        "backgroundcolor":
-                        changing4 ? secondaryColor : thirdColor,
-                        "textcolor": changing4 ? thirdColor : grey2,
-                        "border":borderbool4?grey2:thirdColor
-                      },
-                      action: () {
-                        setState(() {
-                          borderbool4=!borderbool4;
-                          changing4 = !changing4;
-                          changing2 = false;
-                          changing3 = false;
-                          changing1 = false;
+                            styling: {
+                              "backgroundcolor":
+                              changing1 ? secondaryColor : thirdColor,
+                              "textcolor": changing1 ? thirdColor : grey2,
+                            "border":borderbool1?thirdColor:grey2},
+                            action: () {
+                              setState(() {
+                                borderbool1=!borderbool1;
+                                changing1 =!changing1;
+                                changing2 = false;
+                                changing3 = false;
+                                changing4 = false;
+                                if (changing1 == false &&
+                                    changing2 == false &&
+                                    changing3 == false &&
+                                    changing4 == false) {
+                                  container_visibility = false;
+                                } else {
+                                  container_visibility = true;
+                                }
+                              });
+                            }),
+                        SizedBox(
+                          height: size?.hp(2),
+                        ),
+                        UniversityCard(
+                            image: 'assets/university2.png',
+                            title: 'Far Eastern Federal University',
+                            subTitle: 'Tver,Russia',
+                            text1: '5178',
+                            text1_2: 'World rank',
+                            text2: 'Private',
+                            text2_2: 'University type',
+                            text3: '6 Yrs',
+                            text3_2: 'Course duration',
+                            text4: '684000rs/yr',
+                            text4_2: 'Course fee',
+                            styling: {
+                              "backgroundcolor":
+                              changing2 ? secondaryColor : thirdColor,
+                              "textcolor": changing2 ? thirdColor : grey2,
+                              "border":borderbool2?thirdColor:grey2
+                            },
+                            action: () {
+                              setState(() {
+                                borderbool2=!borderbool2;
+                                changing2 =!changing2;
+                                changing1 = false;
+                                changing3 = false;
+                                changing4 = false;
+                                if (changing1 == false &&
+                                    changing2 == false &&
+                                    changing3 == false &&
+                                    changing4 == false) {
+                                  container_visibility = false;
+                                } else {
+                                  container_visibility = true;
+                                }
+                              });
+                            }),
+                        SizedBox(
+                          height: size?.hp(2),
+                        ),
+                        UniversityCard(
+                            image: 'assets/university3.png',
+                            title: 'Rudan State Medical University',
+                            subTitle: 'Tver,Russia',
+                            text1: '5178',
+                            text1_2: 'World rank',
+                            text2: 'Private',
+                            text2_2: 'University type',
+                            text3: '6 Yrs',
+                            text3_2: 'Course duration',
+                            text4: '684000rs/yr',
+                            text4_2: 'Course fee',
+                            styling: {
+                              "backgroundcolor":
+                              changing3 ? secondaryColor : thirdColor,
+                              "textcolor": changing3 ? thirdColor : grey2,
+                              "border":borderbool3?thirdColor:grey2
+                            },
+                            action: () {
+                              setState(() {
+                                borderbool3=!borderbool3;
+                                changing3 =!changing3;
+                                changing2 = false;
+                                changing1 = false;
+                                changing4 = false;
+                                if (changing1 == false &&
+                                    changing2 == false &&
+                                    changing3 == false &&
+                                    changing4 == false) {
+                                  container_visibility = false;
+                                } else {
+                                  container_visibility = true;
+                                }
+                              });
+                            }),
+                        SizedBox(
+                          height: size?.hp(2),
+                        ),
+                        UniversityCard(
+                            image: 'assets/university4.png',
+                            title: 'Tyumen State Medical University',
+                            subTitle: 'Tver,Russia',
+                            text1: '5178',
+                            text1_2: 'World rank',
+                            text2: 'Private',
+                            text2_2: 'University type',
+                            text3: '6 Yrs',
+                            text3_2: 'Course duration',
+                            text4: '684000rs/yr',
+                            text4_2: 'Course fee',
+                            styling: {
+                              "backgroundcolor":
+                              changing4 ? secondaryColor : thirdColor,
+                              "textcolor": changing4 ? thirdColor : grey2,
+                              "border":borderbool4?thirdColor:grey2
+                            },
+                            action: () {
+                              setState(() {
+                                borderbool4=!borderbool4;
+                                changing4 =!changing4;
+                                changing2 = false;
+                                changing3 = false;
+                                changing1 = false;
 
-                          if (changing1 == false &&
-                              changing2 == false &&
-                              changing3 == false &&
-                              changing4 == false) {
-                            container_visibility = false;
-                          } else {
-                            container_visibility = true;
-                          }
-                        });
-                      }),
-                  SizedBox(
-                    height: size?.hp(2),
+                                if (changing1 == false &&
+                                    changing2 == false &&
+                                    changing3 == false &&
+                                    changing4 == false) {
+                                  container_visibility = false;
+                                } else {
+                                  container_visibility = true;
+                                }
+                              });
+                            }),
+                        SizedBox(
+                          height: size?.hp(2),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
-              ),
-            ],
           ),
         ),
       ),

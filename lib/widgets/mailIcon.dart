@@ -15,13 +15,9 @@ class _EmailIconState extends State<EmailIcon> {
   @override
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
-    return Container(
-      width: size?.wp(5),
-      height: size?.hp(2.5),
-      child: Icon(Icons.alternate_email_sharp,
-        size: 30,
-        color:primaryColor,
-      ),
+    return Icon(Icons.alternate_email_sharp,
+      size: 25,
+      color:primaryColor,
     );
   }
 }

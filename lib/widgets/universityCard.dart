@@ -65,8 +65,8 @@ class UniversityCard extends StatelessWidget {
                 ),
               ),
               trailing: Container(
-                  margin: EdgeInsets.only(bottom:35),
-                  child: Icon(Icons.open_in_browser,color: grey2,)),
+                margin: EdgeInsets.only(bottom: 25),
+                  child: Image.asset('assets/external.png')),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -145,11 +145,8 @@ class UniversityCard extends StatelessWidget {
             Container(
               width: size?.wp(45),
               height: size?.hp(5),
-              decoration: ShapeDecoration(
-                  shape: StadiumBorder(side: BorderSide(color: styling["border"]))
-              ),
               child: TextButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(styling["backgroundcolor"]),shape: MaterialStateProperty.all(StadiumBorder())),
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(styling["backgroundcolor"]),shape: MaterialStateProperty.all(StadiumBorder(side: BorderSide(color: styling["border"])))),
                 onPressed: action,
                 child: Text('Shortlist',
                   textScaleFactor: 1,

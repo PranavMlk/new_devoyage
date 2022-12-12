@@ -51,7 +51,7 @@ class McqCard extends StatelessWidget {
               Icon(Icons.access_time_rounded,size: 17.5,),
               Text('  20 MCQ\'s',
                 textScaleFactor: 1.1,
-                style: TextStyle(
+                style: TextStyle( 
                   color: subColor,
                   fontWeight: FontWeight.w400
                 ),

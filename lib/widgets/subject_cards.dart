@@ -39,7 +39,7 @@ Screen ? size;
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
               Text(text1,
-              textScaleFactor: 1.3,
+              textScaleFactor: 1.2,
               style: TextStyle(
                   color: grey2,
                   fontWeight: FontWeight.w500
@@ -47,20 +47,17 @@ Screen ? size;
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(text2,
-                textScaleFactor: 1.1,
-                style: TextStyle(
-                    color: grey2,
-                    fontWeight: FontWeight.w500
-                ),
-              )
-            ],
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(text2,
+              textScaleFactor: 1,
+              style: TextStyle(
+                  color: grey2,
+                  fontWeight: FontWeight.w500
+              ),
+            )
+          ],
         )
         ],
       ),

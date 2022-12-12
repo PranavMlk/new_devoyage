@@ -9,7 +9,7 @@ class LockIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Icon(Icons.lock_outlined,
       color: primaryColor,
-      size: 30,
+      size: 25,
     );
   }
 }

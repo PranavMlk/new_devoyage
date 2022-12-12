@@ -50,6 +50,7 @@ class _ResetState extends State<Reset> {
                 child: Stack(
                   children:[
                     Container(
+                      height: size?.hp(5),
                       alignment: Alignment.centerLeft,
                       child: Text('Reset',
                         textScaleFactor: 2.225,
@@ -61,10 +62,11 @@ class _ResetState extends State<Reset> {
                     ),
                     Column(
                       children: [
+                        SizedBox(height: size?.hp(4.3),),
                         Container(
-                          margin: EdgeInsets.only(top: 32),
+                          margin: EdgeInsets.only(left: 1.5),
                           height: size?.hp(.4),
-                          width: size?.wp(9.5),
+                          width: size?.wp(6),
                           decoration: BoxDecoration(
                               color: secondaryColor,
                               borderRadius: BorderRadius.circular(5)

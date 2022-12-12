@@ -11,7 +11,7 @@ class McqThree extends StatefulWidget {
 
 Widget  McqText(String text){
   return Text(text,
-    textScaleFactor: 1.25,
+    textScaleFactor: 1.1,
     style: TextStyle(
         color: fourthColor,
         fontWeight: FontWeight.w400

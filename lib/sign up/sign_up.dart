@@ -48,11 +48,13 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
+                        SizedBox(height: size?.hp(4.3),),
                         Container(
-                          margin: EdgeInsets.only(top: 32),
                           height: size?.hp(.4),
                           width: size?.wp(6),
+                          margin: EdgeInsets.only(left: 1.5),
                           decoration: BoxDecoration(
                               color: secondaryColor,
                               borderRadius: BorderRadius.circular(5)
@@ -86,15 +88,16 @@ class _SignUpState extends State<SignUp> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
+                          alignment: Alignment.centerLeft,
                           width: size?.wp(20),
                           child: TextField(
                             decoration: InputDecoration(
                               icon: Icon(Icons.emoji_emotions_outlined,
                                 color: primaryColor,
-                                size: 30,
+                                size: 25,
                               ),
                               label: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text('Dr',
                                     textScaleFactor: 1,
@@ -133,7 +136,7 @@ class _SignUpState extends State<SignUp> {
                       decoration: InputDecoration(
                         icon: Icon(Icons.phone,
                             color: primaryColor,
-                            size: 30),
+                            size: 25),
                         label: Text('Mobile',
                           textScaleFactor: 1,
                           style: TextStyle(
@@ -155,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                     Row(
                       children: [
                         Text('By signing up, you agree to our',
-                          textScaleFactor: 1.2,
+                          textScaleFactor: 1,
                           style: TextStyle(
                               color: grey2,
                               fontWeight: FontWeight.w400,
@@ -166,7 +169,7 @@ class _SignUpState extends State<SignUp> {
                           child: TextButton(
                             onPressed: (){},
                             child: Text('Terms & Conditions',
-                              textScaleFactor: 1.2,
+                              textScaleFactor: 1.1,
                               style: TextStyle(
                                 color: primaryColor,
                                 fontWeight: FontWeight.w600,
@@ -181,7 +184,7 @@ class _SignUpState extends State<SignUp> {
         child: Row(
           children: [
             Text('and',
-              textScaleFactor: 1.2,
+              textScaleFactor: 1,
               style: TextStyle(
                       color: grey2,
                       fontWeight: FontWeight.w400
@@ -192,7 +195,7 @@ class _SignUpState extends State<SignUp> {
               child: TextButton(
                     onPressed: (){},
                     child: Text('Privacy Policy',
-                      textScaleFactor: 1.2,
+                      textScaleFactor: 1.1,
                       style: TextStyle(
                       color: primaryColor,
                       fontWeight: FontWeight.w600,

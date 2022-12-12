@@ -49,6 +49,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 child: Stack(
                   children:[
                     Container(
+                      height: size?.hp(5),
                       alignment: Alignment.centerLeft,
                       child: Text('Forgot',
                         textScaleFactor: 2.225,
@@ -60,10 +61,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     ),
                     Column(
                       children: [
+                        SizedBox(height: size?.hp(4.3),),
                         Container(
-                          margin: EdgeInsets.only(top: 32),
+                          margin: EdgeInsets.only(left: 1.5),
                           height: size?.hp(.4),
-                          width: size?.wp(8.9),
+                          width: size?.wp(6),
                           decoration: BoxDecoration(
                               color: secondaryColor,
                               borderRadius: BorderRadius.circular(5)
@@ -88,31 +90,33 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ),
               ),
               SizedBox(height:size?.hp(2),),
-              Container(
-                width: size?.wp(87),
-                child: Column(
-                  children: [
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Don't worry it happense. Please enter the address",
-                        textScaleFactor: 1.2,
-                        style: TextStyle(
-                          color: grey2,
-                          fontWeight: FontWeight.w500,
+              Padding(
+                padding: const EdgeInsets.only(left:30),
+                child: Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text("Don't worry it happense. Please enter the address",
+                          textScaleFactor: 1.2,
+                          style: TextStyle(
+                            color: grey2,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
-                    ),
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      child: Text("associated with your account.",
-                        textScaleFactor: 1.2,
-                        style: TextStyle(
-                          color: grey2,
-                          fontWeight: FontWeight.w500,
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text("associated with your account.",
+                          textScaleFactor: 1.2,
+                          style: TextStyle(
+                            color: grey2,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: size?.hp(1),),

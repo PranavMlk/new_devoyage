@@ -106,7 +106,7 @@ class _McqTwoState extends State<McqTwo> {
                           Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>McqThree()));
                         },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Epithelium', textColor: grey1,subColor: grey1, model: Icons.headphones,color: Colors.yellowAccent.shade700,text: '', action: () {  },),
+                        McqCard(name: 'Epithelium', textColor: grey1,subColor: grey1, model:Image.asset('assets/crown.png'),color: Colors.yellowAccent.shade700,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
                         McqCard(name: 'History of Glance', model: Icons.headphones, textColor: grey1, subColor: grey1,color: Colors.yellowAccent.shade700,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),

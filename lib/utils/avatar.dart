@@ -1,6 +1,6 @@
 //Avatar
 
-String companylogo = "assets/Logo.png";
+String companylogo = "assets/logo.png";
 String onboarding1 = "assets/screen1.png";
 String onboarding2= "assets/screen2.png";
 String onboarding3 = "assets/screen3.png";

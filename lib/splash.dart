@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Spacer(),
               Container(
                 height: size?.hp(3),
-                child: Text('Devoyage Pvt Ltd',
+                child: Text('edvoyage Pvt Ltd',
                   style: TextStyle(
                     fontWeight: FontWeight.w800,
                     color: primaryColor

@@ -92,6 +92,9 @@ flutter:
      - assets/humananotamy.png
      - assets/profile.png
      - assets/mcqcard.png
+     - assets/external.png
+     - assets/logo.png
+     - assets/crown.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

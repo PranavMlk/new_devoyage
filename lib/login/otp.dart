@@ -44,10 +44,11 @@ class _OtpState extends State<Otp> {
                 height: size?.hp(2),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 32),
+                padding: const EdgeInsets.only(left: 30),
                 child: Stack(
                   children:[
                     Container(
+                      height: size?.hp(5),
                       alignment: Alignment.centerLeft,
                       child: Text('Enter OTP',
                         textScaleFactor: 2.225,
@@ -59,10 +60,11 @@ class _OtpState extends State<Otp> {
                     ),
                     Column(
                       children: [
+                        SizedBox(height: size?.hp(4.3),),
                         Container(
-                          margin: EdgeInsets.only(top: 32),
+                          margin: EdgeInsets.only(left:1.5),
                           height: size?.hp(.4),
-                          width: size?.wp(8.9),
+                          width: size?.wp(6),
                           decoration: BoxDecoration(
                               color: secondaryColor,
                               borderRadius: BorderRadius.circular(5)
@@ -74,31 +76,33 @@ class _OtpState extends State<Otp> {
                 ),
               ),
               SizedBox(height: size?.hp(3),),
-              Container(
-                width: size?.wp(87),
-                child: Column(
-                  children: [
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      child: Text("A 6 digit code has been sent to",
-                        textScaleFactor: 1.2,
-                        style: TextStyle(
+              Padding(
+                padding: const EdgeInsets.only(left:30),
+                child: Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text("A 6 digit code has been sent to",
+                          textScaleFactor: 1.2,
+                          style: TextStyle(
+                              color: grey2,
+                              fontWeight: FontWeight.w500
+                          ),
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text("z********a@gmial.com",
+                          textScaleFactor: 1.2,
+                          style: TextStyle(
                             color: grey2,
-                            fontWeight: FontWeight.w500
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
-                    ),
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      child: Text("z********a@gmial.com",
-                        textScaleFactor: 1.2,
-                        style: TextStyle(
-                          color: grey2,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: size?.hp(7.5),),

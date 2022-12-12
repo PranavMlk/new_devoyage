@@ -53,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Stack(
                       children:[
                         Container(
+                          height: size?.hp(5),
                         alignment: Alignment.centerLeft,
                         child: Text('Login',
                           textScaleFactor: 2.275,
@@ -64,10 +65,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                         Column(
                           children: [
+                            SizedBox(height: size?.hp(4.3),),
                             Container(
-                              margin: EdgeInsets.only(top: 32),
+                              margin: EdgeInsets.only(left: 1.5),
                               height: size?.hp(.4),
-                              width: size?.wp(6.9),
+                              width: size?.wp(6),
                               decoration: BoxDecoration(
                                   color: secondaryColor,
                                   borderRadius: BorderRadius.circular(5)

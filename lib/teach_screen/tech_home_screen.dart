@@ -49,7 +49,7 @@ class _TeachHomeState extends State<TeachHome> {
                 ),
 
                 Container(
-                    height: size?.hp(86),
+                    height: size?.hp(85),
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(horizontal:10),
                     child: ListView(

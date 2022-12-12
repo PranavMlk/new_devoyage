@@ -21,7 +21,7 @@ class TeachCard extends StatelessWidget {
   Widget build(BuildContext context) {
     size = Screen(MediaQuery.of(context).size);
     return Container(
-      height: size?.hp(15),
+      height: size?.hp(16),
       width: size?.wp(95),
       color: grey1,
       child: TextButton(
@@ -63,7 +63,7 @@ class TeachCard extends StatelessWidget {
                   ),
                   Spacer(flex: 7,),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
+                    padding: const EdgeInsets.only(bottom: 9),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
