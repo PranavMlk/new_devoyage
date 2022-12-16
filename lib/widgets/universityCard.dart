@@ -47,6 +47,7 @@ class UniversityCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(8)
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ListTile(
               leading: Image.asset(image),
@@ -80,7 +81,7 @@ class UniversityCard extends StatelessWidget {
                       ),
                     ),
                     Text(text1_2,
-                      textScaleFactor: .6,
+                      textScaleFactor: .8,
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: grey2
@@ -97,7 +98,7 @@ class UniversityCard extends StatelessWidget {
                       ),
                     ),
                     Text(text2_2,
-                      textScaleFactor: .6,
+                      textScaleFactor: .8,
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: grey2
@@ -114,7 +115,7 @@ class UniversityCard extends StatelessWidget {
                       ),
                     ),
                     Text(text3_2,
-                      textScaleFactor: .6,
+                      textScaleFactor: .8,
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: grey2
@@ -131,7 +132,7 @@ class UniversityCard extends StatelessWidget {
                       ),
                     ),
                     Text(text4_2,
-                      textScaleFactor: .6,
+                      textScaleFactor: .8,
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: grey2
@@ -149,7 +150,7 @@ class UniversityCard extends StatelessWidget {
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(styling["backgroundcolor"]),shape: MaterialStateProperty.all(StadiumBorder(side: BorderSide(color: styling["border"])))),
                 onPressed: action,
                 child: Text('Shortlist',
-                  textScaleFactor: 1,
+                  textScaleFactor: 1.25,
                   style: TextStyle(
                       color: styling["textcolor"]
                   ),

@@ -42,10 +42,10 @@ class SlotCard extends StatelessWidget {
                 color: boxColor1,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(text1,
-                    textScaleFactor: 1.3,
+                    textScaleFactor: 1.35,
                     style: TextStyle(
                         color: textColor1,
                         fontWeight: FontWeight.bold

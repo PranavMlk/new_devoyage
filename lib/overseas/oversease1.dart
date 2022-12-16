@@ -22,7 +22,7 @@ class _OverseasOneState extends State<OverseasOne> {
           backgroundColor: thirdColor,
           appBar: AppBar(
             backgroundColor: thirdColor,
-            elevation: .2,
+            elevation: .3,
             title: Text('Study Abroad',
             textScaleFactor: 1.3,
             style: TextStyle(
@@ -33,14 +33,12 @@ class _OverseasOneState extends State<OverseasOne> {
             ),
           ),
           body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: size?.hp(1.5),),
-              Center(
-                child: Container(
-                  height: size?.hp(29),
-                  width: size?.wp(53),
-                  child: Image.asset(overseas1),
-                ),
+              Container(
+                height: size?.hp(29),
+                width: size?.wp(53),
+                child: Image.asset(overseas1),
               ),
               SizedBox(height: size?.hp(4),),
               Text('Overseas Study Expert',
@@ -53,12 +51,14 @@ class _OverseasOneState extends State<OverseasOne> {
               ),
               SizedBox(height: size?.hp(4),),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(width: size?.wp(15),),
                   Container(
                     alignment: Alignment.center,
-                    width: size?.wp(79),
+                    height: size?.hp(25),
+                    width: size?.wp(60),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Row(
                           children: [
@@ -74,81 +74,91 @@ class _OverseasOneState extends State<OverseasOne> {
                             ),
                           ],
                         ),
-                        SizedBox(height: size?.hp(2),),
-                        Row(
+
+                        Column(
                           children: [
-                            BlackDot(),
-                            SizedBox(width: size?.wp(3),),
-                            Text('But unsure which university would be',
-                              textScaleFactor: .97,
-                              style: TextStyle(
-                                color: fourthColor,
-                                  fontWeight: FontWeight.w500
-                              ),
+                            Row(
+                              children: [
+                                BlackDot(),
+                                SizedBox(width: size?.wp(3),),
+                                Text('But unsure which university would be',
+                                  textScaleFactor: .97,
+                                  style: TextStyle(
+                                    color: fourthColor,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(width: size?.wp(4.2),),
+                                Text('the best-fit for you?',
+                                  textScaleFactor: .97,
+                                  style: TextStyle(
+                                      color: fourthColor,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                        Row(
+                        Column(
                           children: [
-                            SizedBox(width: size?.wp(4.2),),
-                            Text('the best-fit for you?',
-                              textScaleFactor: .97,
-                              style: TextStyle(
-                                color: fourthColor,
-                                  fontWeight: FontWeight.w500
-                              ),
+                            Row(
+                              children: [
+                                BlackDot(),
+                                SizedBox(width: size?.wp(3),),
+                                Text('Devoyage experts will guide on every',
+                                  textScaleFactor: .97,
+                                  style: TextStyle(
+                                    color: fourthColor,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(width: size?.wp(4.2),),
+                                Text('step in your journey.',
+                                  textScaleFactor: .97,
+                                  style: TextStyle(
+                                      color: fourthColor,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                        SizedBox(height: size?.hp(2),),
-                        Row(
+                        Column(
                           children: [
-                            BlackDot(),
-                            SizedBox(width: size?.wp(3),),
-                            Text('Devoyage experts will guide on every',
-                              textScaleFactor: .97,
-                              style: TextStyle(
-                                color: fourthColor,
-                                  fontWeight: FontWeight.w500
-                              ),
+                            Row(
+                              children: [
+                                BlackDot(),
+                                SizedBox(width: size?.wp(3),),
+                                Text('Start with our course finder and',
+                                  textScaleFactor: .97,
+                                  style: TextStyle(
+                                    color: fourthColor,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(width: size?.wp(4.2),),
-                            Text('step in your journey.',
-                              textScaleFactor: .97,
-                              style: TextStyle(
-                                color: fourthColor,
-                                  fontWeight: FontWeight.w500
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: size?.hp(2),),
-                        Row(
-                          children: [
-                            BlackDot(),
-                            SizedBox(width: size?.wp(3),),
-                            Text('Start with our course finder and',
-                              textScaleFactor: .97,
-                              style: TextStyle(
-                                color: fourthColor,
-                                  fontWeight: FontWeight.w500
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(width: size?.wp(4.2),),
-                            Text('schedule a slot with a counsellor',
-                              textScaleFactor: .97,
-                              style: TextStyle(
-                                color: fourthColor,
-                                  fontWeight: FontWeight.w500
-                              ),
+                            Row(
+                              children: [
+                                SizedBox(width: size?.wp(4.2),),
+                                Text('schedule a slot with a counsellor',
+                                  textScaleFactor: .97,
+                                  style: TextStyle(
+                                      color: fourthColor,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),

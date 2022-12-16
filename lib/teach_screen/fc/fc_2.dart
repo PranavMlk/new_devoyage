@@ -105,61 +105,64 @@ class _FcTwoState extends State<FcTwo> {
                   children: [
                     Spacer(flex: 2,),
                     Container(
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text('What is the',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w400
-                                ),
-                              ),
-                              Text(' origin',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold
-                                ),
-                              ),
-                              Text(' and',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w400
-                                ),
-                              ),
-                              Text(' insertion',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold
-                                ),
-                              ),
-                              Text(' of the',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w400
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text('lateral rectus',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
-                              Text(' muscle?',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text('What is the',
+                                  textScaleFactor: 1.2,
+                                  style: TextStyle(
                                     fontWeight: FontWeight.w400
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                Text(' origin',
+                                  textScaleFactor: 1.2,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                Text(' and',
+                                  textScaleFactor: 1.2,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w400
+                                  ),
+                                ),
+                                Text(' insertion',
+                                  textScaleFactor: 1.2,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                Text(' of the',
+                                  textScaleFactor: 1.2,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w400
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text('lateral rectus',
+                                  textScaleFactor: 1.2,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                Text(' muscle?',
+                                  textScaleFactor: 1.2,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Spacer(),
@@ -168,54 +171,60 @@ class _FcTwoState extends State<FcTwo> {
                     Container(
                       child: Column(
                         children: [
-                          Row(
-                            children: [
-                              SizedBox(width: size?.wp(16),),
-                              Text('1. Origin :',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 50),
+                            child: Row(
+                              children: [
+                                Text('1. Origin :',
+                                  textScaleFactor: 1.1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold
+                                  ),
                                 ),
-                              ),
-                              Text(' common tendinous ring or the',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400
+                                Text(' common tendinous ring or the',
+                                  textScaleFactor: 1.1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              SizedBox(width: size?.wp(20),),
-                              Text('annulus of zinn',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 67),
+                            child: Row(
+                              children: [
+                                Text('annulus of zinn',
+                                  textScaleFactor: 1.1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
                     Spacer(flex: 2,),
-                    Row(
-                      children: [
-                        SizedBox(width: size?.wp(16),),
-                        Text('2. Insertin :',
-                          textScaleFactor: 1.2,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: Row(
+                        children: [
+                          Text('2. Insertin :',
+                            textScaleFactor: 1.2,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold
+                            ),
                           ),
-                        ),
-                        Text(' lateral aspect of the sclera',
-                          textScaleFactor: 1.2,
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400
+                          Text(' lateral aspect of the sclera',
+                            textScaleFactor: 1.1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     Spacer(flex: 2,),
                     Container(
@@ -224,102 +233,99 @@ class _FcTwoState extends State<FcTwo> {
                         child: Image.asset('assets/humananotamy.png',),
                     ),
                     Spacer(flex: 2,),
-                    Row(
-                      children: [
-                        SizedBox(width: size?.wp(16),),
-                        Container(
-                          child: Row(
-                            children: [
-                              BlackDot(),
-                              SizedBox(width: size?.wp(2),),
-                              Text('NOTES :',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold
-                                ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal:50),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            BlackDot(),
+                            SizedBox(width: size?.wp(2),),
+                            Text('NOTES :',
+                              textScaleFactor: 1.2,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                     Spacer(),
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('The lateral rectus is a flat-shapped muscle',
-                            textScaleFactor: 1.2,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('The lateral rectus is a flat-shapped muscle',
+                              textScaleFactor: 1.1,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400
+                              ),
                             ),
-                          ),
-                          Text('and an abductor which moves the eye',
-                            textScaleFactor: 1.2,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400
+                            Text('and an abductor which moves the eye',
+                              textScaleFactor: 1.1,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400
+                              ),
                             ),
-                          ),
-                          Text('laterally and side to side along with the',
-                            textScaleFactor: 1.2,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400
+                            Text('laterally and side to side along with the',
+                              textScaleFactor: 1.1,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400
+                              ),
                             ),
-                          ),
-                          Text('medical rectus.',
-                            textScaleFactor: 1.2,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400
+                            Text('medical rectus.',
+                              textScaleFactor: 1.1,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                     Spacer(flex: 2,),
-                    Row(
-                      children: [
-                        SizedBox(width: size?.wp(16),),
-                        Container(
-                          child: Row(
-                            children: [
-                              BlackDot(),
-                              SizedBox(width: size?.wp(2),),
-                              Text('REFERENCES :',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold
-                                ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            BlackDot(),
+                            SizedBox(width: size?.wp(2),),
+                            Text('REFERENCES :',
+                              textScaleFactor: 1.2,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                     Spacer(),
-                    Row(
-                      children: [
-                        SizedBox(width: size?.wp(16),),
-                        Container(
-                          width: size?.wp(76),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('www.patient.co.uk,Egton Medical',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400
-                                ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: Container(
+                        width: size?.wp(76),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('www.patient.co.uk,Egton Medical',
+                              textScaleFactor: 1.2,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400
                               ),
-                              Text('Information System Limited.',
-                                textScaleFactor: 1.2,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400
-                                ),
+                            ),
+                            Text('Information System Limited.',
+                              textScaleFactor: 1.2,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                     Spacer(flex: 2,),
                   ],

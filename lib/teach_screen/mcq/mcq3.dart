@@ -87,7 +87,7 @@ class _McqThreeState extends State<McqThree> {
                     ],
                   ),
               ),
-              SizedBox(height: size?.hp(31),),
+              SizedBox(height: size?.hp(30.75),),
               Container(
                 height: size?.hp(36),
                 child: Column(

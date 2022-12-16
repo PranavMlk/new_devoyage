@@ -27,7 +27,7 @@ Screen ? size;
         child: Stack(
             children: [
         Container(
-        padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 15),
+        padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           color: thirdColor,

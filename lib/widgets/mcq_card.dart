@@ -60,7 +60,8 @@ class McqCard extends StatelessWidget {
           ),
           trailing: Column(
             children: [
-              Icon(model,color: color,size: 25,),
+              Container(child: model,
+                color: color),
               Text(text!,
                 textScaleFactor: 1,
                 style: TextStyle(

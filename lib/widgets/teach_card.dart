@@ -63,7 +63,7 @@ class TeachCard extends StatelessWidget {
                   ),
                   Spacer(flex: 7,),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 9),
+                    padding: const EdgeInsets.only(bottom:6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [

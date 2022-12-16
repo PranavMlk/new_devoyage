@@ -154,13 +154,126 @@ class _CsTwoState extends State<CsTwo> {
                         initiallyExpanded: false,
                         collapsedIconColor: primaryColor,
                         children: [
-                          Text('1. Gather Equipments'),
-                          Text('2. Introduction'),
-                          Text('3. General Inspection'),
-                          Text('4. Closer Inspection'),
-                          Text('5. Palpation'),
-                          Text('6. Final Examination'),
-                          Text('7. References')
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: size?.wp(50),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text('1. ',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                            ),
+                                          ),
+                                          Text('Gather Equipments',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                              decoration: TextDecoration.underline
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text('2. ',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                            ),
+                                          ),
+                                          Text('Introduction',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                                decoration: TextDecoration.underline
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text('3. ',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                            ),
+                                          ),
+                                          Text('General Inspection',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                                decoration: TextDecoration.underline
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text('4. ',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                            ),
+                                          ),
+                                          Text('Closer Inspection',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                                decoration: TextDecoration.underline
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text('5. ',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                            ),
+                                          ),
+                                          Text('Palpation',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                                decoration: TextDecoration.underline
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text('6. ',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                            ),
+                                          ),
+                                          Text('Final Examination',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                                decoration: TextDecoration.underline
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text('7. ',
+                                            textScaleFactor: 1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                            ),
+                                          ),
+                                          Text('References',
+                                            textScaleFactor:1.25,
+                                            style: TextStyle(color: Colors.blue.shade700,
+                                                decoration: TextDecoration.underline
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
                         ],
                       ),
                       Divider(color: fourthColor,),
@@ -173,10 +286,28 @@ class _CsTwoState extends State<CsTwo> {
                   fontWeight: FontWeight.w600
               ),
             ),
+            collapsedIconColor: primaryColor,
             initiallyExpanded: false,
             children: [
-              Text('Headtorch or pen torch'),
-              Text('Tounge depressors(x2)'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Container(
+                        child: Column(
+                          children: [
+                            Text('1. Headtorch or pen torch',
+                              textScaleFactor: 1.25,
+                            ),
+                            Text('2. Tounge depressors(x2)',
+                              textScaleFactor: 1.25,
+                            ),
+                          ],
+                        ),
+                    ),
+                  ],
+                ),
+              ),
                       ],
                   ),
         Divider(color: fourthColor,),
@@ -192,6 +323,100 @@ class _CsTwoState extends State<CsTwo> {
               ),
               initiallyExpanded: false,
               children: [
+                Padding(padding: EdgeInsets.only(left: 20),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: size?.wp(90),
+                        height: size?.hp(25),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Text('Wash your hands',
+                                  textScaleFactor: 1.25,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                Text(' and',
+                                  textScaleFactor: 1.25,
+                                ),
+                                Text(' don PPE',
+                                  textScaleFactor: 1.25,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                Text(' if appropriate.',
+                                  textScaleFactor: 1.25,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Introduce yourself to the patient including your',
+                                      textScaleFactor: 1.25,
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: const [
+                                    Text('name and role.',
+                                      textScaleFactor: 1.25,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text('Confirm the patient\'s name and date of birth.',
+                                  textScaleFactor: 1.25,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: const [
+                                    Text('Briefly explain what the examination will involve',
+                                      textScaleFactor: 1.25,
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: const [
+                                    Text('using patient-friendly language.',
+                                      textScaleFactor: 1.25,
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text('Gain consent to proceed with the examination.',
+                                  textScaleFactor: 1.25,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text('Ask the patient to sit on a chair.',
+                                  textScaleFactor: 1.25,
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
                       Divider(color: fourthColor,),
@@ -291,12 +516,10 @@ class _CsTwoState extends State<CsTwo> {
         ]
               ),
               ),
-
   ]
         ),
         ),
       ),
     );
-
   }
 }

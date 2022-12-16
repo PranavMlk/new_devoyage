@@ -69,54 +69,56 @@ class _OverseasTwoState extends State<OverseasTwo> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: size?.wp(5),
-                        ),
-                        Icon(
-                          Icons.stars_sharp,
-                          color: secondaryColor,
-                          size: 27.5,
-                        ),
-                        SizedBox(
-                          width: size?.wp(5),
-                        ),
-                        Text(
-                          'Shortlist Universities',
-                          textScaleFactor: 1,
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: size?.wp(34),
-                        ),
-                        Container(
-                          height: size?.hp(5),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: secondaryColor,
-                          ),
-                          child: Visibility(
-                            visible: container_visibility,
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  PageRouteBuilder(
-                                    pageBuilder: (_, __, ___) =>
-                                        OverSeaseThree(),
-                                  ),
-                                );
-                              },
-                              icon: Icon(
-                                Icons.arrow_forward,
-                                size: 20,
-                                color: thirdColor,
-                              ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal:15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.stars_sharp,
+                                  color: secondaryColor,
+                                  size: 27.5,
+                                ),
+                                Text(
+                                  'Shortlist Universities',
+                                  textScaleFactor: 1,
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ],
                             ),
                           ),
-                        )
-                      ],
+
+                          Container(
+                            height: size?.hp(5),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: secondaryColor,
+                            ),
+                            child: Visibility(
+                              visible: container_visibility,
+                              child: IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    PageRouteBuilder(
+                                      pageBuilder: (_, __, ___) =>
+                                          OverSeaseThree(),
+                                    ),
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.arrow_forward,
+                                  size: 20,
+                                  color: thirdColor,
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -147,7 +149,7 @@ class _OverseasTwoState extends State<OverseasTwo> {
                 ),
               ),
                   Container(
-                    height: size?.hp(77),
+                    height: size?.hp(79),
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     width: double.infinity,
                     child: ListView(
@@ -162,9 +164,6 @@ class _OverseasTwoState extends State<OverseasTwo> {
                               style: TextStyle(
                                   color: grey2, fontWeight: FontWeight.w500),
                             ),
-                            SizedBox(
-                              width: size?.wp(7),
-                            )
                           ],
                         ),
                         SizedBox(
@@ -182,12 +181,11 @@ class _OverseasTwoState extends State<OverseasTwo> {
                             text3_2: 'Course duration',
                             text4: '684000rs/yr',
                             text4_2: 'Course fee',
-
                             styling: {
                               "backgroundcolor":
                               changing1 ? secondaryColor : thirdColor,
                               "textcolor": changing1 ? thirdColor : grey2,
-                            "border":borderbool1?thirdColor:grey2},
+                            "border":borderbool1?grey2:thirdColor},
                             action: () {
                               setState(() {
                                 borderbool1=!borderbool1;
@@ -224,7 +222,7 @@ class _OverseasTwoState extends State<OverseasTwo> {
                               "backgroundcolor":
                               changing2 ? secondaryColor : thirdColor,
                               "textcolor": changing2 ? thirdColor : grey2,
-                              "border":borderbool2?thirdColor:grey2
+                              "border":borderbool2?grey2:thirdColor
                             },
                             action: () {
                               setState(() {
@@ -262,7 +260,7 @@ class _OverseasTwoState extends State<OverseasTwo> {
                               "backgroundcolor":
                               changing3 ? secondaryColor : thirdColor,
                               "textcolor": changing3 ? thirdColor : grey2,
-                              "border":borderbool3?thirdColor:grey2
+                              "border":borderbool3?grey2:thirdColor
                             },
                             action: () {
                               setState(() {
@@ -300,7 +298,7 @@ class _OverseasTwoState extends State<OverseasTwo> {
                               "backgroundcolor":
                               changing4 ? secondaryColor : thirdColor,
                               "textcolor": changing4 ? thirdColor : grey2,
-                              "border":borderbool4?thirdColor:grey2
+                              "border":borderbool4?grey2:thirdColor
                             },
                             action: () {
                               setState(() {

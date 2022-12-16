@@ -95,31 +95,31 @@ class _VideoTwoState extends State<VideoTwo> {
                 ),
 
                 Container(
-                  height: size?.hp(86),
+                  height: size?.hp(84),
                   width: double.infinity,
                   padding: EdgeInsets.symmetric(horizontal:10),
                   child: ListView(
                       children: [
-                        SizedBox(height: size?.hp(2),),
-                        McqCard(name: 'Gametogenesis', textColor: primaryColor,subColor: grey2, model: Icons.lock_open_outlined,color: primaryColor,text: 'FREE', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Epithelium', textColor: grey1,subColor: grey1, model: Icons.headphones,color: Colors.yellowAccent.shade700,text: '', action: () {  },),
+                        McqCard(name: 'Gametogenesis', textColor: primaryColor,subColor: grey2, model: Icon(Icons.lock_open_outlined,color: primaryColor),text: 'FREE', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'History of Glance', model: Icons.headphones, textColor: grey1, subColor: grey1,color: Colors.yellowAccent.shade700,text: '', action: () {  },),
+                        McqCard(name: 'Epithelium', textColor: grey1,subColor: grey1, model:Image.asset('assets/crown.png'),text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Muscle & Cartilages', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        McqCard(name: 'History of Glance', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Spinal code', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        McqCard(name: 'Muscle & Cartilages', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Cerebellum', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        McqCard(name: 'Spinal code', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Osteology', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        McqCard(name: 'Cerebellum', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Nose & Toungue', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        McqCard(name: 'Osteology', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Larynx & Pharynx', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        McqCard(name: 'Nose & Toungue', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(1),),
-                        McqCard(name: 'Facial nerves', model: Icons.headphones,color: Colors.yellowAccent.shade700, textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        McqCard(name: 'Larynx & Pharynx', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
+                        SizedBox(height: size?.hp(1),),
+                        McqCard(name: 'Facial nerves', model: Image.asset('assets/crown.png'), textColor: grey1, subColor: grey1,text: '', action: () {  },),
                         SizedBox(height: size?.hp(2),)
 
                       ]
