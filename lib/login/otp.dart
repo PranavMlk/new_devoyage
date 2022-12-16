@@ -60,7 +60,7 @@ class _OtpState extends State<Otp> {
                     ),
                     Column(
                       children: [
-                        SizedBox(height: size?.hp(4.3),),
+                        SizedBox(height: size?.hp(4.5),),
                         Container(
                           margin: EdgeInsets.only(left:1.5),
                           height: size?.hp(.4),

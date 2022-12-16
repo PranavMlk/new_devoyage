@@ -22,7 +22,7 @@ import 'package:login_aadi/widgets/subject_cards.dart';
 void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: true,
-    home:TeachHome(),
+    home:SplashScreen(),
   ),
   );
 }
