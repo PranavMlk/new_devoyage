@@ -71,6 +71,7 @@ class _OverSeaseThreeState extends State<OverSeaseThree> {
               Divider(height: .1,color: grey2,indent: 35,endIndent: 35,),
               SizedBox(height: size?.hp(.5),),
       Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

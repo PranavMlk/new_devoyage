@@ -97,7 +97,7 @@ class _VideoTwoState extends State<VideoTwo> {
                 Container(
                   height: size?.hp(84),
                   width: double.infinity,
-                  padding: EdgeInsets.symmetric(horizontal:10),
+                  padding: EdgeInsets.symmetric(horizontal:7),
                   child: ListView(
                       children: [
                         SizedBox(height: size?.hp(1),),

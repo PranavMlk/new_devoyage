@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:login_aadi/utils/responsive.dart';
 import '../utils/colors/colors.dart';
 class UniversityCard extends StatelessWidget {
    late String image;
@@ -34,20 +33,18 @@ class UniversityCard extends StatelessWidget {
 
 });
 
-  Screen ? size;
 
     @override
     Widget build(BuildContext context) {
-      size = Screen(MediaQuery.of(context).size);
       return Container(
-        width: size?.wp(87),
-        height: size?.hp(22.5),
+        padding: EdgeInsets.all(10),
+        width: 327,
+        height:161,
         decoration: BoxDecoration(
             color: thirdColor,
             borderRadius: BorderRadius.circular(8)
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ListTile(
               leading: Image.asset(image),
@@ -142,15 +139,14 @@ class UniversityCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: size?.hp(1.5),),
+            Spacer(),
             Container(
-              width: size?.wp(45),
-              height: size?.hp(5),
+              width: 158,
+              height: 30,
               child: TextButton(
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(styling["backgroundcolor"]),shape: MaterialStateProperty.all(StadiumBorder(side: BorderSide(color: styling["border"])))),
                 onPressed: action,
                 child: Text('Shortlist',
-                  textScaleFactor: 1.25,
                   style: TextStyle(
                       color: styling["textcolor"]
                   ),
@@ -175,13 +171,11 @@ class CountryButton extends StatelessWidget {
     required this.textColor
 });
 
-  Screen ? size;
   @override
   Widget build(BuildContext context) {
-    size = Screen(MediaQuery.of(context).size);
     return Container(
-        height: size?.hp(4.5),
-        width: size?.wp(16),
+        height: 31,
+        width: 59,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(7.5),
             ),
@@ -190,7 +184,6 @@ class CountryButton extends StatelessWidget {
         child: TextButton(
           onPressed: (){},
           child: Text(text,
-            textScaleFactor: .8,
             style: TextStyle(
                 color: textColor
             ),

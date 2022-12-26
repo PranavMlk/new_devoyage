@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
-import 'package:login_aadi/utils/responsive.dart';
 
 class SlotCard extends StatelessWidget {
 
@@ -22,20 +21,19 @@ class SlotCard extends StatelessWidget {
     required this.action,
   });
 
-  Screen ? size;
+
   @override
   Widget build(BuildContext context) {
-    size = Screen(MediaQuery.of(context).size);
     return Container(
-      width: size?.wp(26.5),
-      height: size?.hp(9),
+      width: 100,
+      height: 60,
       color: grey1,
       child: TextButton(
         onPressed: action,
         child: Stack(
           children: [
             Container(
-              width: size?.wp(26.5),
+              width: 100,
               padding: EdgeInsets.only(top: 6),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -45,7 +43,7 @@ class SlotCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(text1,
-                    textScaleFactor: 1.35,
+                    textScaleFactor: 1.25,
                     style: TextStyle(
                         color: textColor1,
                         fontWeight: FontWeight.bold
@@ -59,7 +57,7 @@ class SlotCard extends StatelessWidget {
               children: [
                 Container(
                   alignment: Alignment.center,
-                  height: size?.hp(2),
+                  height: 15,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight: Radius.circular(10)),
@@ -97,13 +95,11 @@ class DateButton extends StatelessWidget {
     required this.borderColor
 });
 
-  Screen ? size;
   @override
   Widget build(BuildContext context) {
-    size = Screen(MediaQuery.of(context).size);
     return Container(
-      height: size?.hp(7.5),
-      width: size?.wp(12.5),
+      height: 50,
+      width: 50,
       decoration: BoxDecoration(
         border: Border.all(color: borderColor),
         borderRadius: BorderRadius.circular(12.5),
@@ -115,7 +111,7 @@ class DateButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(text1,
-              textScaleFactor: 1.3,
+              textScaleFactor: 1.2,
               style: TextStyle(
                 color: textColor,
                 fontWeight: FontWeight.bold,

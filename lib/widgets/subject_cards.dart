@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:login_aadi/utils/colors/colors.dart';
-import 'package:login_aadi/utils/responsive.dart';
 
 class SubjectCard extends StatelessWidget {
 
@@ -14,20 +13,18 @@ class SubjectCard extends StatelessWidget {
     required this.action,
 });
 
-Screen ? size;
   @override
   Widget build(BuildContext context) {
-    size = Screen(MediaQuery.of(context).size);
     return Container(
-      height: size?.hp(12),
-      width: size?.wp(95),
+      height: 80,
+      width: 355,
       color: grey1,
       child: TextButton(
         onPressed: action,
         child: Stack(
             children: [
         Container(
-        padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 20),
+        padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           color: thirdColor,
@@ -66,7 +63,7 @@ Screen ? size;
     mainAxisAlignment: MainAxisAlignment.end,
     children: [
     Container(
-    height: size?.hp(1.7),
+    height: 15,
     decoration: BoxDecoration(
     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight: Radius.circular(10)),
     color: primaryColor,
